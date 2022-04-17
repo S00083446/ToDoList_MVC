@@ -11,7 +11,6 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
 
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();// before .NET 6
 
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
