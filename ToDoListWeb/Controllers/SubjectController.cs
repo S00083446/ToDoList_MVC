@@ -44,5 +44,42 @@ namespace ToDoListWeb.Controllers
             }
             return View();
         }
+
+        // GET
+        public IActionResult Edit(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            var categoryFromDb = _db.Subjects.Find(id);
+            //var categoryFromDbFirst = _db.Subjects.FirstOrDefault(u => u.Id == id);
+            //var categoryFromDbSingle = _db.Subjects.SingleOrDefault(u => u.Id == id);
+
+            if (categoryFromDb == null)
+            {
+                return NotFound();
+            }
+            return View(categoryFromDb);
+        }
+        // POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public IActionResult Edit(Subjects obj)
+        {
+            if (obj.Name == obj.DisplayOrder.ToString())
+            {
+                ModelState.AddModelError("name", "The DisplayOrder cannot exactly match the Name");
+
+            }
+            if (ModelState.IsValid)
+            {
+                _db.Subjects.Add(obj);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View();
+        }
     }
 }
