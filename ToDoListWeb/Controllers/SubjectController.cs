@@ -40,6 +40,7 @@ namespace ToDoListWeb.Controllers
             {
                 _db.Subjects.Add(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Subject created successfully";
                 return RedirectToAction("Index");
             }
             return View();
@@ -75,11 +76,50 @@ namespace ToDoListWeb.Controllers
             }
             if (ModelState.IsValid)
             {
-                _db.Subjects.Add(obj);
+                _db.Subjects.Update(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Subject updated successfully";
+
                 return RedirectToAction("Index");
             }
             return View();
         }
+        // GET
+        public IActionResult Delete(int? id)
+        {
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+            var categoryFromDb = _db.Subjects.Find(id);
+            //var categoryFromDbFirst = _db.Subjects.FirstOrDefault(u => u.Id == id);
+            //var categoryFromDbSingle = _db.Subjects.SingleOrDefault(u => u.Id == id);
+
+            if (categoryFromDb == null)
+            {
+                return NotFound();
+            }
+            return View(categoryFromDb);
+        }
+        // POST
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public IActionResult DeletePost(int? id)
+        {
+            var obj = _db.Subjects.Find(id);
+
+            if (obj == null)
+            {
+                return NotFound();
+            }
+                _db.Subjects.Remove(obj);
+                _db.SaveChanges();
+            TempData["success"] = "Subject deleted successfully";
+            return RedirectToAction("Index");
+        }
     }
 }
+
+   
+
