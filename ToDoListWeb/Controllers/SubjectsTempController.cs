@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using ToDoListWeb.Data;
-using ToDoListWeb.Models;
+using ToDoList.DataAccess;
+using ToDoListModels;
 
 namespace ToDoListWeb.Controllers
 {

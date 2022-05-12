@@ -1,0 +1,17 @@
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoList.DataAccess\bin\Debug\net6.0\ToDoList.DataAccess.deps.json
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoList.DataAccess\bin\Debug\net6.0\ToDoList.DataAccess.runtimeconfig.json
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoList.DataAccess\bin\Debug\net6.0\ToDoList.DataAccess.dll
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoList.DataAccess\bin\Debug\net6.0\ToDoList.DataAccess.pdb
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoList.DataAccess\bin\Debug\net6.0\ToDoListModels.dll
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoList.DataAccess\bin\Debug\net6.0\ToDoListModels.pdb
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoList.DataAccess\obj\Debug\net6.0\ToDoList.DataAccess.csproj.AssemblyReference.cache
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoList.DataAccess\obj\Debug\net6.0\ToDoList.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoList.DataAccess\obj\Debug\net6.0\ToDoList.DataAccess.AssemblyInfoInputs.cache
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoList.DataAccess\obj\Debug\net6.0\ToDoList.DataAccess.AssemblyInfo.cs
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoList.DataAccess\obj\Debug\net6.0\ToDoList.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoList.DataAccess\obj\Debug\net6.0\ToDoList.DataAccess.csproj.CopyComplete
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoList.DataAccess\obj\Debug\net6.0\ToDoList.DataAccess.dll
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoList.DataAccess\obj\Debug\net6.0\refint\ToDoList.DataAccess.dll
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoList.DataAccess\obj\Debug\net6.0\ToDoList.DataAccess.pdb
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoList.DataAccess\obj\Debug\net6.0\ToDoList.DataAccess.genruntimeconfig.cache
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoList.DataAccess\obj\Debug\net6.0\ref\ToDoList.DataAccess.dll

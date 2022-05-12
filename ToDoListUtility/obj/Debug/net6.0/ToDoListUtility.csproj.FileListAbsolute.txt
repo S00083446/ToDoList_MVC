@@ -1,0 +1,12 @@
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListUtility\bin\Debug\net6.0\ToDoListUtility.deps.json
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListUtility\bin\Debug\net6.0\ToDoListUtility.dll
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListUtility\bin\Debug\net6.0\ToDoListUtility.pdb
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListUtility\obj\Debug\net6.0\ToDoListUtility.csproj.AssemblyReference.cache
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListUtility\obj\Debug\net6.0\ToDoListUtility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListUtility\obj\Debug\net6.0\ToDoListUtility.AssemblyInfoInputs.cache
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListUtility\obj\Debug\net6.0\ToDoListUtility.AssemblyInfo.cs
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListUtility\obj\Debug\net6.0\ToDoListUtility.csproj.CoreCompileInputs.cache
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListUtility\obj\Debug\net6.0\ToDoListUtility.dll
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListUtility\obj\Debug\net6.0\refint\ToDoListUtility.dll
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListUtility\obj\Debug\net6.0\ToDoListUtility.pdb
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListUtility\obj\Debug\net6.0\ref\ToDoListUtility.dll

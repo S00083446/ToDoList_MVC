@@ -1,0 +1,12 @@
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListModels\bin\Debug\net6.0\ToDoListModels.deps.json
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListModels\bin\Debug\net6.0\ToDoListModels.dll
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListModels\bin\Debug\net6.0\ToDoListModels.pdb
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListModels\obj\Debug\net6.0\ToDoListModels.csproj.AssemblyReference.cache
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListModels\obj\Debug\net6.0\ToDoListModels.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListModels\obj\Debug\net6.0\ToDoListModels.AssemblyInfoInputs.cache
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListModels\obj\Debug\net6.0\ToDoListModels.AssemblyInfo.cs
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListModels\obj\Debug\net6.0\ToDoListModels.csproj.CoreCompileInputs.cache
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListModels\obj\Debug\net6.0\ToDoListModels.dll
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListModels\obj\Debug\net6.0\refint\ToDoListModels.dll
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListModels\obj\Debug\net6.0\ToDoListModels.pdb
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListModels\obj\Debug\net6.0\ref\ToDoListModels.dll

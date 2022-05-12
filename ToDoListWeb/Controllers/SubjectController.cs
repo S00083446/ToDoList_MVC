@@ -1,6 +1,6 @@
 ﻿  using Microsoft.AspNetCore.Mvc;
-using ToDoListWeb.Data;
-using ToDoListWeb.Models;
+using ToDoList.DataAccess;
+using ToDoListModels;
 
 namespace ToDoListWeb.Controllers
 {
@@ -53,15 +53,15 @@ namespace ToDoListWeb.Controllers
             {
                 return NotFound();
             }
-            var categoryFromDb = _db.Subjects.Find(id);
-            //var categoryFromDbFirst = _db.Subjects.FirstOrDefault(u => u.Id == id);
+            //var categoryFromDb = _db.Subjects.Find(id);
+            var categoryFromDbFirst = _db.Subjects.FirstOrDefault(u => u.Name == "id");
             //var categoryFromDbSingle = _db.Subjects.SingleOrDefault(u => u.Id == id);
 
-            if (categoryFromDb == null)
+            if (categoryFromDbFirst == null)
             {
                 return NotFound();
             }
-            return View(categoryFromDb);
+            return View(categoryFromDbFirst);
         }
         // POST
         [HttpPost]
