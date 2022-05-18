@@ -6,12 +6,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ToDoList.DataAccess;
+using ToDoList.DataAccess.Repository.IRepository;
 
 #nullable disable
 
 namespace ToDoList.DataAccess.Migrations
 {
-    [DbContext(typeof(ApplicationDbContext))]
+    [DbContext(typeof(ISubjectRepository))]
     [Migration("20220512152848_Add Category")]
     partial class AddCategory
     {

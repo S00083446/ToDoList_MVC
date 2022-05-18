@@ -11,7 +11,7 @@ namespace ToDoList.DataAccess.Repository
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        private readonly ApplicationDbContext _db;
+        private readonly ApplicationDbContext _db;                                                                                                                                                                                                                               
         internal DbSet<T> dbSet;
 
         public Repository(ApplicationDbContext db)
@@ -21,29 +21,75 @@ namespace ToDoList.DataAccess.Repository
         }
         public void Add(T entity)
         {
-            throw new NotImplementedException();
+            dbSet.Add(entity);
+            //throw new NotImplementedException();
         }
 
-        public IEnumerable<T> GetAll()
+        public IEnumerable<T> GetAll()//Expression<Func<T, bool>>? filter=null, string? includeProperties = null)
         {
             IQueryable<T> query = dbSet;
+
+            //if (filter != null)
+            //{
+            //    query = query.Where(filter);
+            //}
+            //if (includeProperties != null)
+            //{
+            //    foreach (var includeProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            //    {
+            //        query = query.Include(includeProp);
+            //    }
+            //}
             return query.ToList();
             //throw new NotImplementedException();
         }
 
+     
         public T GetFirstOrDefault(Expression<Func<T, bool>> filter)
         {
-            throw new NotImplementedException();
+            //if (tracked)
+            //{
+                IQueryable<T> query = dbSet;
+
+                query = query.Where(filter);
+                //if (includeProperties != null)
+                //{
+                //    foreach (var includeProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                //    {
+                //        query = query.Include(includeProp);
+                //    }
+                //}
+                return query.FirstOrDefault();
+            //}
+            //else
+            //{
+            //    IQueryable<T> query = dbSet.AsNoTracking();
+
+            //    query = query.Where(filter);
+            //    if (includeProperties != null)
+            //    {
+            //        foreach (var includeProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            //        {
+            //            query = query.Include(includeProp);
+            //        }
+            //    }
+            //    return query.FirstOrDefault();
+            //}
+
         }
 
+        
         public void Remove(T entity)
         {
-            throw new NotImplementedException();
+            dbSet.Remove(entity);
+            //throw new NotImplementedException();
         }
 
         public void RemoveRange(IEnumerable<T> entity)
         {
-            throw new NotImplementedException();
+            dbSet.RemoveRange(entity);
+            //throw new NotImplementedException();
         }
+
     }
 }
