@@ -36,7 +36,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.0-rc.1.21452.15",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "6.0.0-rc.1.21452.15",
-          "Microsoft.EntityFrameworkCore.Relational": "6.0.0-rc.1.21452.10",
+          "Microsoft.EntityFrameworkCore": "6.0.0-rc.1.21452.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0-rc.1.21452.10",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.0-rc.1.21452.10",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.0-rc.1.21464.1",
@@ -2850,7 +2850,10 @@
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.0-rc.1.21452.15",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "6.0.0-rc.1.21452.15",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.0-rc.1.21464.1"
+          "Microsoft.EntityFrameworkCore": "6.0.0-rc.1.21452.10",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0-rc.1.21452.10",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.0-rc.1.21464.1",
+          "System.Collections.Immutable": "6.0.0-rc.1.21451.13"
         },
         "runtime": {
           "ToDoListModels.dll": {}

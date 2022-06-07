@@ -10,6 +10,6 @@ namespace ToDoList.DataAccess;
 
         }
         public DbSet<Subjects> Subjects { get; set; }
-    }  
+        public DbSet<CoverType> CoverTypes { get; set; }
+}
 
- 

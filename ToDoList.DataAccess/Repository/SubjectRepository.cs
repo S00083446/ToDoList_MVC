@@ -10,7 +10,7 @@ namespace ToDoList.DataAccess.Repository
 {
     public class SubjectRepository : Repository<Subjects>, ISubjectRepository
     {
-        private ApplicationDbContext _db;
+        private readonly ApplicationDbContext _db;
 
         public SubjectRepository(ApplicationDbContext db) : base(db)
         {

@@ -9,6 +9,8 @@ namespace ToDoList.DataAccess.Repository.IRepository
     public interface IUnitOfWork
     {
         ISubjectRepository Subjects { get; }
+        ICoverTypeRepository CoverType { get; }
+
         void Save();
 
     }

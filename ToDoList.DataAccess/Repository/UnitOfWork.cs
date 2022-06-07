@@ -16,8 +16,12 @@ namespace ToDoList.DataAccess.Repository
         {
             _db = db;
             Subjects = new SubjectRepository(_db);
+            CoverType = new CoverTypeRepository(_db);
+
         }
         public ISubjectRepository Subjects { get; private set; }
+        public ICoverTypeRepository CoverType { get; private set; }
+
 
         public void Save()
         {

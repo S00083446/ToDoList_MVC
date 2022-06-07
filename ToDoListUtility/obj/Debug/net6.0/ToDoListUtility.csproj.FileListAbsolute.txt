@@ -1,4 +1,5 @@
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListUtility\bin\Debug\net6.0\ToDoListUtility.deps.json
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListUtility\bin\Debug\net6.0\ToDoListUtility.runtimeconfig.json
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListUtility\bin\Debug\net6.0\ToDoListUtility.dll
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListUtility\bin\Debug\net6.0\ToDoListUtility.pdb
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListUtility\bin\Debug\net6.0\refs\Microsoft.AspNetCore.Antiforgery.dll
@@ -297,4 +298,5 @@ C:\Users\giles\source\repos\ToDoList_MVC\ToDoListUtility\obj\Debug\net6.0\ToDoLi
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListUtility\obj\Debug\net6.0\ToDoListUtility.dll
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListUtility\obj\Debug\net6.0\refint\ToDoListUtility.dll
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListUtility\obj\Debug\net6.0\ToDoListUtility.pdb
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListUtility\obj\Debug\net6.0\ToDoListUtility.genruntimeconfig.cache
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListUtility\obj\Debug\net6.0\ref\ToDoListUtility.dll

@@ -3206,7 +3206,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.0-rc.1.21452.15",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "6.0.0-rc.1.21452.15",
-          "Microsoft.EntityFrameworkCore.Relational": "6.0.0-rc.1.21452.10",
+          "Microsoft.EntityFrameworkCore": "6.0.0-rc.1.21452.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0-rc.1.21452.10",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.0-rc.1.21464.1",
           "System.Collections.Immutable": "6.0.0-rc.1.21451.13",
@@ -3225,7 +3225,10 @@
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.0-rc.1.21452.15",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "6.0.0-rc.1.21452.15",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.0-rc.1.21464.1"
+          "Microsoft.EntityFrameworkCore": "6.0.0-rc.1.21452.10",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0-rc.1.21452.10",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.0-rc.1.21464.1",
+          "System.Collections.Immutable": "6.0.0-rc.1.21451.13"
         },
         "compile": {
           "bin/placeholder/ToDoListModels.dll": {}
@@ -9828,18 +9831,19 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 6.0.0-rc.1.21452.15",
       "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 6.0.0-rc.1.21452.15",
       "Microsoft.EntityFrameworkCore >= 6.0.0-rc.1.21452.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.0-rc.1.21452.10",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.0-rc.1.21452.10",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.0-rc.1.21464.1",
       "System.Collections.Immutable >= 6.0.0-rc.1.21451.13",
-      "ToDoList.DataAccess >= 1.0.0"
+      "ToDoList.DataAccess >= 1.0.0",
+      "ToDoListModels >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\giles\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\giles\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -9850,9 +9854,6 @@
       "packagesPath": "C:\\Users\\giles\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoListWeb\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
         "C:\\Users\\giles\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -9870,6 +9871,9 @@
           "projectReferences": {
             "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoList.DataAccess\\ToDoList.DataAccess.csproj": {
               "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoList.DataAccess\\ToDoList.DataAccess.csproj"
+            },
+            "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoListModels\\ToDoListModels.csproj": {
+              "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoListModels\\ToDoListModels.csproj"
             }
           }
         }
@@ -9884,6 +9888,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[6.0.0-rc.1.21452.15, )"
+          },
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
             "target": "Package",
             "version": "[6.0.0-rc.1.21452.15, )"
