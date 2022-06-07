@@ -145,7 +145,6 @@ C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\refs\Syste
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\refs\System.Buffers.dll
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\refs\System.Collections.Concurrent.dll
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\refs\System.Collections.dll
-C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\refs\System.Collections.Immutable.dll
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\refs\System.Collections.NonGeneric.dll
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\refs\System.Collections.Specialized.dll
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\refs\System.ComponentModel.Annotations.dll
@@ -304,10 +303,6 @@ C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\Microsoft.
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\Microsoft.Build.dll
-C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\Microsoft.Build.Framework.dll
-C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\Microsoft.Build.Tasks.Core.dll
-C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\Microsoft.Build.Utilities.Core.dll
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -356,7 +351,7 @@ C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\NuGet.Pack
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\NuGet.ProjectModel.dll
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\NuGet.Protocol.dll
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\NuGet.Versioning.dll
-C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\System.CodeDom.dll
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\System.Collections.Immutable.dll
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\System.Composition.AttributedModel.dll
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\System.Composition.Convention.dll
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\System.Composition.Hosting.dll
@@ -365,7 +360,6 @@ C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\System.Com
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\System.Drawing.Common.dll
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\System.Resources.Extensions.dll
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\System.Runtime.Caching.dll
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\System.Security.Permissions.dll
@@ -564,3 +558,4 @@ C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\obj\Debug\net6.0\refint\ToD
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\obj\Debug\net6.0\ToDoListWeb.pdb
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\obj\Debug\net6.0\ToDoListWeb.genruntimeconfig.cache
 C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\obj\Debug\net6.0\ref\ToDoListWeb.dll
+C:\Users\giles\source\repos\ToDoList_MVC\ToDoListWeb\bin\Debug\net6.0\Microsoft.Build.Locator.dll

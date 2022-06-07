@@ -74,7 +74,7 @@
             },
             "System.Collections.Immutable": {
               "target": "Package",
-              "version": "[6.0.0-rc.1.21451.13, )"
+              "version": "[7.0.0-preview.4.22229.4, )"
             }
           },
           "imports": [

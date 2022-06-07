@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using ToDoListModels;
 
-namespace ToDoListWeb.Controllers
+namespace ToDoListWeb.Areas.Student.Controllers
 {
     public class HomeController : Controller
     {

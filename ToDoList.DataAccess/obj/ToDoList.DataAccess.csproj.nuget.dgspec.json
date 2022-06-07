@@ -56,6 +56,12 @@
               "target": "Package",
               "version": "[6.0.0-rc.1.21452.10, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0-rc.1.21452.10, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.0-rc.1.21452.10, )"
@@ -72,7 +78,7 @@
             },
             "System.Collections.Immutable": {
               "target": "Package",
-              "version": "[6.0.0-rc.1.21451.13, )"
+              "version": "[7.0.0-preview.4.22229.4, )"
             }
           },
           "imports": [
@@ -164,7 +170,7 @@
             },
             "System.Collections.Immutable": {
               "target": "Package",
-              "version": "[6.0.0-rc.1.21451.13, )"
+              "version": "[7.0.0-preview.4.22229.4, )"
             }
           },
           "imports": [

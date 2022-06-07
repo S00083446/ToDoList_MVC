@@ -1918,10 +1918,10 @@
           "lib/netstandard1.3/System.Collections.Concurrent.dll": {}
         }
       },
-      "System.Collections.Immutable/6.0.0-rc.1.21451.13": {
+      "System.Collections.Immutable/7.0.0-preview.4.22229.4": {
         "type": "package",
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0-rc.1.21451.13"
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         },
         "compile": {
           "lib/net6.0/System.Collections.Immutable.dll": {}
@@ -1930,7 +1930,7 @@
           "lib/net6.0/System.Collections.Immutable.dll": {}
         },
         "build": {
-          "buildTransitive/netcoreapp3.1/_._": {}
+          "buildTransitive/net6.0/_._": {}
         }
       },
       "System.Composition/1.0.31": {
@@ -2595,7 +2595,7 @@
           }
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/6.0.0-rc.1.21451.13": {
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {
         "type": "package",
         "compile": {
           "lib/net6.0/System.Runtime.CompilerServices.Unsafe.dll": {}
@@ -6219,25 +6219,29 @@
         "system.collections.concurrent.nuspec"
       ]
     },
-    "System.Collections.Immutable/6.0.0-rc.1.21451.13": {
-      "sha512": "Oo60yi/K7+aCy5FYbImpp2xVUKrQR5COiNarQVWFbFxpjieTG6vWser++YJyCNA+DptLzVy8tgVWC5R+A3FJ5Q==",
+    "System.Collections.Immutable/7.0.0-preview.4.22229.4": {
+      "sha512": "Lvoo9WJQi6dHPjZIFPzHMv07nmiCrusBCX6faWqnfwrBmWd2VgfJOY72gdc2wtfzJyjW1gtEu3QYVMzWDFTExw==",
       "type": "package",
-      "path": "system.collections.immutable/6.0.0-rc.1.21451.13",
+      "path": "system.collections.immutable/7.0.0-preview.4.22229.4",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Collections.Immutable.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
         "buildTransitive/netcoreapp2.0/System.Collections.Immutable.targets",
-        "buildTransitive/netcoreapp3.1/_._",
-        "lib/net461/System.Collections.Immutable.dll",
-        "lib/net461/System.Collections.Immutable.xml",
+        "lib/net462/System.Collections.Immutable.dll",
+        "lib/net462/System.Collections.Immutable.xml",
         "lib/net6.0/System.Collections.Immutable.dll",
         "lib/net6.0/System.Collections.Immutable.xml",
+        "lib/net7.0/System.Collections.Immutable.dll",
+        "lib/net7.0/System.Collections.Immutable.xml",
         "lib/netstandard2.0/System.Collections.Immutable.dll",
         "lib/netstandard2.0/System.Collections.Immutable.xml",
-        "system.collections.immutable.6.0.0-rc.1.21451.13.nupkg.sha512",
+        "system.collections.immutable.7.0.0-preview.4.22229.4.nupkg.sha512",
         "system.collections.immutable.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -8222,10 +8226,10 @@
         "version.txt"
       ]
     },
-    "System.Runtime.CompilerServices.Unsafe/6.0.0-rc.1.21451.13": {
-      "sha512": "B4MhG+nG2BX3Z0WR6MRG0YHCZKTskVEcP1M2Al3vWmMRgPuZgvAQ/bGP4gZqoVBWxJqzjgK5rs5o6i5XSfg2Jg==",
+    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
+      "sha512": "/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
       "type": "package",
-      "path": "system.runtime.compilerservices.unsafe/6.0.0-rc.1.21451.13",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -8242,7 +8246,7 @@
         "lib/netcoreapp3.1/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
-        "system.runtime.compilerservices.unsafe.6.0.0-rc.1.21451.13.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt"
       ]
@@ -9845,7 +9849,7 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 6.0.0-rc.1.21452.10",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.0-rc.1.21452.10",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.0-rc.1.21464.1",
-      "System.Collections.Immutable >= 6.0.0-rc.1.21451.13"
+      "System.Collections.Immutable >= 7.0.0-preview.4.22229.4"
     ]
   },
   "packageFolders": {
@@ -9921,7 +9925,7 @@
           },
           "System.Collections.Immutable": {
             "target": "Package",
-            "version": "[6.0.0-rc.1.21451.13, )"
+            "version": "[7.0.0-preview.4.22229.4, )"
           }
         },
         "imports": [

@@ -37,10 +37,11 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.0-rc.1.21452.15",
           "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "6.0.0-rc.1.21452.15",
           "Microsoft.EntityFrameworkCore": "6.0.0-rc.1.21452.10",
+          "Microsoft.EntityFrameworkCore.Design": "6.0.0-rc.1.21452.10",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.0-rc.1.21452.10",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.0-rc.1.21452.10",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.0-rc.1.21464.1",
-          "System.Collections.Immutable": "6.0.0-rc.1.21451.13",
+          "System.Collections.Immutable": "7.0.0-preview.4.22229.4",
           "Microsoft.AspNetCore.Antiforgery": "6.0.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "6.0.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "6.0.0.0",
@@ -178,7 +179,6 @@
           "System.Buffers.Reference": "6.0.0.0",
           "System.Collections.Concurrent.Reference": "6.0.0.0",
           "System.Collections.Reference": "6.0.0.0",
-          "System.Collections.Immutable.Reference": "6.0.0.0",
           "System.Collections.NonGeneric": "6.0.0.0",
           "System.Collections.Specialized": "6.0.0.0",
           "System.ComponentModel.Annotations": "6.0.0.0",
@@ -352,7 +352,7 @@
           "System.Memory": "4.5.4",
           "System.Reflection.Emit": "4.6.0",
           "System.Reflection.Emit.Lightweight": "4.6.0",
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0-rc.1.21451.13",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "runtime": {
@@ -455,7 +455,7 @@
         "dependencies": {
           "Microsoft.Build.Framework": "16.9.0",
           "Microsoft.Win32.Registry": "4.7.0",
-          "System.Collections.Immutable": "6.0.0-rc.1.21451.13",
+          "System.Collections.Immutable": "7.0.0-preview.4.22229.4",
           "System.Memory": "4.5.4",
           "System.Reflection.Metadata": "5.0.0",
           "System.Security.Principal.Windows": "4.7.0",
@@ -493,7 +493,7 @@
           "Microsoft.Build.Utilities.Core": "16.9.0",
           "Microsoft.Win32.Registry": "4.7.0",
           "System.CodeDom": "4.4.0",
-          "System.Collections.Immutable": "6.0.0-rc.1.21451.13",
+          "System.Collections.Immutable": "7.0.0-preview.4.22229.4",
           "System.Reflection.Metadata": "5.0.0",
           "System.Reflection.TypeExtensions": "4.3.0",
           "System.Resources.Extensions": "4.6.0",
@@ -517,7 +517,7 @@
         "dependencies": {
           "Microsoft.Build.Framework": "16.9.0",
           "Microsoft.Win32.Registry": "4.7.0",
-          "System.Collections.Immutable": "6.0.0-rc.1.21451.13",
+          "System.Collections.Immutable": "7.0.0-preview.4.22229.4",
           "System.Security.Permissions": "4.7.0",
           "System.Text.Encoding.CodePages": "4.7.0"
         },
@@ -546,10 +546,10 @@
       "Microsoft.CodeAnalysis.Common/4.0.0-3.final": {
         "dependencies": {
           "Microsoft.CodeAnalysis.Analyzers": "3.3.2",
-          "System.Collections.Immutable": "6.0.0-rc.1.21451.13",
+          "System.Collections.Immutable": "7.0.0-preview.4.22229.4",
           "System.Memory": "4.5.4",
           "System.Reflection.Metadata": "5.0.0",
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0-rc.1.21451.13",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
           "System.Text.Encoding.CodePages": "4.7.0",
           "System.Threading.Tasks.Extensions": "4.5.4"
         },
@@ -1344,7 +1344,7 @@
           "Microsoft.CodeAnalysis.Workspaces.MSBuild": "4.0.0-3.final",
           "Newtonsoft.Json": "13.0.1",
           "NuGet.ProjectModel": "5.9.1",
-          "System.Collections.Immutable": "6.0.0-rc.1.21451.13"
+          "System.Collections.Immutable": "7.0.0-preview.4.22229.4"
         },
         "runtime": {
           "lib/net6.0/Microsoft.DotNet.Scaffolding.Shared.dll": {
@@ -1363,7 +1363,7 @@
           "Microsoft.Extensions.Caching.Memory": "6.0.0-rc.1.21451.13",
           "Microsoft.Extensions.DependencyInjection": "6.0.0-rc.1.21451.13",
           "Microsoft.Extensions.Logging": "6.0.0-rc.1.21451.13",
-          "System.Collections.Immutable": "6.0.0-rc.1.21451.13",
+          "System.Collections.Immutable": "7.0.0-preview.4.22229.4",
           "System.Diagnostics.DiagnosticSource": "6.0.0-rc.1.21451.13"
         },
         "runtime": {
@@ -1457,7 +1457,7 @@
       "Microsoft.Extensions.DependencyInjection/6.0.0-rc.1.21451.13": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0-rc.1.21451.13",
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0-rc.1.21451.13"
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         }
       },
       "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0-rc.1.21451.13": {},
@@ -1465,7 +1465,7 @@
         "dependencies": {
           "System.Buffers": "4.5.1",
           "System.Memory": "4.5.4",
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0-rc.1.21451.13",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
           "System.Text.Encodings.Web": "6.0.0-rc.1.21451.13",
           "System.Text.Json": "6.0.0-rc.1.21451.13"
         },
@@ -1516,7 +1516,7 @@
       },
       "Microsoft.Extensions.Primitives/6.0.0-rc.1.21451.13": {
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0-rc.1.21451.13"
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         }
       },
       "Microsoft.Identity.Client/4.21.1": {
@@ -1605,7 +1605,7 @@
           "MessagePack": "2.1.152",
           "MessagePackAnalyzer": "2.1.152",
           "Microsoft.Bcl.AsyncInterfaces": "5.0.0",
-          "System.Collections.Immutable": "6.0.0-rc.1.21451.13"
+          "System.Collections.Immutable": "7.0.0-preview.4.22229.4"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Debugger.Contracts.dll": {
@@ -1621,7 +1621,7 @@
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "6.0.0-rc.1.21451.13",
           "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "6.0.0-rc.1.21464.1",
-          "System.Collections.Immutable": "6.0.0-rc.1.21451.13"
+          "System.Collections.Immutable": "7.0.0-preview.4.22229.4"
         },
         "runtime": {
           "lib/net6.0/Microsoft.VisualStudio.Web.CodeGeneration.dll": {
@@ -2043,9 +2043,18 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
-      "System.Collections.Immutable/6.0.0-rc.1.21451.13": {
+      "System.Collections.Immutable/7.0.0-preview.4.22229.4": {
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0-rc.1.21451.13"
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/System.Collections.Immutable.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.22.22904"
+          }
+        },
+        "compile": {
+          "lib/net6.0/System.Collections.Immutable.dll": {}
         }
       },
       "System.Composition/1.0.31": {
@@ -2201,7 +2210,7 @@
       },
       "System.Diagnostics.DiagnosticSource/6.0.0-rc.1.21451.13": {
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0-rc.1.21451.13"
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         }
       },
       "System.Diagnostics.Tools/4.3.0": {
@@ -2517,7 +2526,7 @@
           }
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/6.0.0-rc.1.21451.13": {},
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
       "System.Runtime.Extensions/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -2752,12 +2761,12 @@
       },
       "System.Text.Encodings.Web/6.0.0-rc.1.21451.13": {
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0-rc.1.21451.13"
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         }
       },
       "System.Text.Json/6.0.0-rc.1.21451.13": {
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0-rc.1.21451.13",
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
           "System.Text.Encodings.Web": "6.0.0-rc.1.21451.13"
         }
       },
@@ -3664,12 +3673,6 @@
       "System.Collections.Reference/6.0.0.0": {
         "compile": {
           "System.Collections.dll": {}
-        },
-        "compileOnly": true
-      },
-      "System.Collections.Immutable.Reference/6.0.0.0": {
-        "compile": {
-          "System.Collections.Immutable.dll": {}
         },
         "compileOnly": true
       },
@@ -5316,12 +5319,12 @@
       "path": "system.collections.concurrent/4.3.0",
       "hashPath": "system.collections.concurrent.4.3.0.nupkg.sha512"
     },
-    "System.Collections.Immutable/6.0.0-rc.1.21451.13": {
+    "System.Collections.Immutable/7.0.0-preview.4.22229.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Oo60yi/K7+aCy5FYbImpp2xVUKrQR5COiNarQVWFbFxpjieTG6vWser++YJyCNA+DptLzVy8tgVWC5R+A3FJ5Q==",
-      "path": "system.collections.immutable/6.0.0-rc.1.21451.13",
-      "hashPath": "system.collections.immutable.6.0.0-rc.1.21451.13.nupkg.sha512"
+      "sha512": "sha512-Lvoo9WJQi6dHPjZIFPzHMv07nmiCrusBCX6faWqnfwrBmWd2VgfJOY72gdc2wtfzJyjW1gtEu3QYVMzWDFTExw==",
+      "path": "system.collections.immutable/7.0.0-preview.4.22229.4",
+      "hashPath": "system.collections.immutable.7.0.0-preview.4.22229.4.nupkg.sha512"
     },
     "System.Composition/1.0.31": {
       "type": "package",
@@ -5624,12 +5627,12 @@
       "path": "system.runtime.caching/4.7.0",
       "hashPath": "system.runtime.caching.4.7.0.nupkg.sha512"
     },
-    "System.Runtime.CompilerServices.Unsafe/6.0.0-rc.1.21451.13": {
+    "System.Runtime.CompilerServices.Unsafe/6.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-B4MhG+nG2BX3Z0WR6MRG0YHCZKTskVEcP1M2Al3vWmMRgPuZgvAQ/bGP4gZqoVBWxJqzjgK5rs5o6i5XSfg2Jg==",
-      "path": "system.runtime.compilerservices.unsafe/6.0.0-rc.1.21451.13",
-      "hashPath": "system.runtime.compilerservices.unsafe.6.0.0-rc.1.21451.13.nupkg.sha512"
+      "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
+      "path": "system.runtime.compilerservices.unsafe/6.0.0",
+      "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
     },
     "System.Runtime.Extensions/4.3.0": {
       "type": "package",
@@ -6536,11 +6539,6 @@
       "sha512": ""
     },
     "System.Collections.Reference/6.0.0.0": {
-      "type": "referenceassembly",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "System.Collections.Immutable.Reference/6.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "FBmFykeTbFHvdJ2T4OD1Ymu5q9GzsHK7UeGS2IBGE1ur1nfgEgjjQpY3IOLjiOEHjYs2L7wHwkDRQwfhOqxEOA==",
+  "dgSpecHash": "MFZTCwx58V/JWua41Jzz7eMJF+rrJ2LLINr4HZD3ujBVqanB2BA/d7go8X50jPvwiXL0T6KZ7/Vnyhkb8OeXiA==",
   "success": true,
   "projectFilePath": "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoListUtility\\ToDoListUtility.csproj",
   "expectedPackageFiles": [
@@ -109,7 +109,7 @@
     "C:\\Users\\giles\\.nuget\\packages\\system.codedom\\4.4.0\\system.codedom.4.4.0.nupkg.sha512",
     "C:\\Users\\giles\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
     "C:\\Users\\giles\\.nuget\\packages\\system.collections.concurrent\\4.3.0\\system.collections.concurrent.4.3.0.nupkg.sha512",
-    "C:\\Users\\giles\\.nuget\\packages\\system.collections.immutable\\6.0.0-rc.1.21451.13\\system.collections.immutable.6.0.0-rc.1.21451.13.nupkg.sha512",
+    "C:\\Users\\giles\\.nuget\\packages\\system.collections.immutable\\7.0.0-preview.4.22229.4\\system.collections.immutable.7.0.0-preview.4.22229.4.nupkg.sha512",
     "C:\\Users\\giles\\.nuget\\packages\\system.composition\\1.0.31\\system.composition.1.0.31.nupkg.sha512",
     "C:\\Users\\giles\\.nuget\\packages\\system.composition.attributedmodel\\1.0.31\\system.composition.attributedmodel.1.0.31.nupkg.sha512",
     "C:\\Users\\giles\\.nuget\\packages\\system.composition.convention\\1.0.31\\system.composition.convention.1.0.31.nupkg.sha512",
@@ -153,7 +153,7 @@
     "C:\\Users\\giles\\.nuget\\packages\\system.resources.resourcemanager\\4.3.0\\system.resources.resourcemanager.4.3.0.nupkg.sha512",
     "C:\\Users\\giles\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
     "C:\\Users\\giles\\.nuget\\packages\\system.runtime.caching\\4.7.0\\system.runtime.caching.4.7.0.nupkg.sha512",
-    "C:\\Users\\giles\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0-rc.1.21451.13\\system.runtime.compilerservices.unsafe.6.0.0-rc.1.21451.13.nupkg.sha512",
+    "C:\\Users\\giles\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "C:\\Users\\giles\\.nuget\\packages\\system.runtime.extensions\\4.3.0\\system.runtime.extensions.4.3.0.nupkg.sha512",
     "C:\\Users\\giles\\.nuget\\packages\\system.runtime.handles\\4.3.0\\system.runtime.handles.4.3.0.nupkg.sha512",
     "C:\\Users\\giles\\.nuget\\packages\\system.runtime.interopservices\\4.3.0\\system.runtime.interopservices.4.3.0.nupkg.sha512",
