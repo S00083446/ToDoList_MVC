@@ -4,6 +4,7 @@ using ToDoListModels;
 
 namespace ToDoListWeb.Areas.Student.Controllers
 {
+    [Area("Student")]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

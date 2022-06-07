@@ -4,25 +4,24 @@ using ToDoList.DataAccess.Repository.IRepository;
 using ToDoListModels;
 using System.Collections.Generic;
 
-namespace ToDoListWeb.Controllers;
+namespace ToDoListWeb.Areas.Admin.Controllers;
 [Area("Admin")]
-
 //[Route("api/[controller]/Subject")]
 //[ApiController]
-public class SubjectController : Controller
+public class CoverTypeController : Controller
 {
     //private readonly ApplicationDbContext _db;
     private readonly IUnitOfWork _unitOfWork;
 
-    public SubjectController(IUnitOfWork unitOfWork)
+    public CoverTypeController(IUnitOfWork unitOfWork)
     {
         _unitOfWork = unitOfWork;
     }
     public IActionResult Index()
     {
-        IEnumerable<Subjects> objSubjectList = _unitOfWork.Subjects.GetAll();
+        IEnumerable<CoverType> objCoverTypeList = _unitOfWork.CoverType.GetAll();
 
-        return View(objSubjectList);
+        return View(objCoverTypeList);
     }
 
     // GET
@@ -35,18 +34,14 @@ public class SubjectController : Controller
     [HttpPost]
     [ValidateAntiForgeryToken]
 
-    public IActionResult Create(Subjects obj)
+    public IActionResult Create(CoverType obj)
     {
-        if (obj.Name == obj.DisplayOrder.ToString())
-        {
-            ModelState.AddModelError("name", "The DisplayOrder cannot exactly match the Name");
-
-        }
+        
         if (ModelState.IsValid)
         {
-            _unitOfWork.Subjects.Add(obj);
+            _unitOfWork.CoverType.Add(obj);
             _unitOfWork.Save();
-            TempData["success"] = "Subject created successfully";
+            TempData["success"] = "Cover Type created successfully";
             return RedirectToAction("Index");
         }
         return View(obj);
@@ -60,29 +55,25 @@ public class SubjectController : Controller
             return NotFound();
         }
         //var categoryFromDb = _db.Subjects.Find(id);
-        var subjectFromDbFirst = _unitOfWork.Subjects.GetFirstOrDefault(u => u.Id == id);
+        var coverTypeFromDbFirst = _unitOfWork.CoverType.GetFirstOrDefault(u => u.Id == id);
         //var categoryFromDbSingle = _db.Subjects.SingleOrDefault(u => u.Id == id);
 
-        if (subjectFromDbFirst == null)
+        if (coverTypeFromDbFirst == null)
         {
             return NotFound();
         }
-        return View(subjectFromDbFirst);
+        return View(coverTypeFromDbFirst);
     }
     // POST
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult Edit(Subjects obj)
+    public IActionResult Edit(CoverType obj)
     {
-        if (obj.Name == obj.DisplayOrder.ToString())
+      if (ModelState.IsValid)
         {
-            ModelState.AddModelError("name", "The DisplayOrder cannot exactly match the Name");
-        }
-        if (ModelState.IsValid)
-        {
-            _unitOfWork.Subjects.Update(obj);
+            _unitOfWork.CoverType.Update(obj);
             _unitOfWork.Save();
-            TempData["success"] = "Subject updated successfully";
+            TempData["success"] = "Cover Type updated successfully";
             return RedirectToAction("Index");
         }
         return View(obj);
@@ -97,14 +88,16 @@ public class SubjectController : Controller
         //var categoryFromDb = _db.Subjects.Find(id);
 
         //var categoryFromFirst = _db.FirstOrDefault(u => u.Id == id);
-        var subjectFromDbFirst = _unitOfWork.Subjects.GetFirstOrDefault(u => u.Id == id);
+        //var categoryFromDbFirst = _unitOfWork.Subjects.GetFirstOrDefault(u => u.Id == id);
+        var coverTypeFromDbFirst = _unitOfWork.CoverType.GetFirstOrDefault(u => u.Id == id);
+
         //var categoryFromDbSingle = _db.Subjects.SingleOrDefault(u => u.Id == id);
 
-        if (subjectFromDbFirst == null)
+        if (coverTypeFromDbFirst == null)
         {
             return NotFound();
         }
-        return View(subjectFromDbFirst);
+        return View(coverTypeFromDbFirst);
     }
     // POST
     [HttpPost]
@@ -112,15 +105,15 @@ public class SubjectController : Controller
 
     public IActionResult DeletePost(int? id)
     {
-        var obj = _unitOfWork.Subjects.GetFirstOrDefault(u => u.Id == id);// (u => u.Id == id);
+        var obj = _unitOfWork.CoverType.GetFirstOrDefault(u => u.Id == id);// (u => u.Id == id);
 
         if (obj == null)
         {
             return NotFound();
         }
-        _unitOfWork.Subjects.Remove(obj);
+        _unitOfWork.CoverType.Remove(obj);
         _unitOfWork.Save();
-        TempData["success"] = "Subject deleted successfully";
+        TempData["success"] = "Cover Type deleted successfully";
         return RedirectToAction("Index");
     }
 }
