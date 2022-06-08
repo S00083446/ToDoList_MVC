@@ -47,24 +47,24 @@ app.MapControllerRoute(
 
 app.Run();
 
-// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-static void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-{
-    if (env.IsDevelopment())
-    {
-        app.UseDeveloperExceptionPage();
-        //app.UseSwagger();
-        //app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SampleWebAPI v1"));
-    }
+//// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+//static void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+//{
+//    if (env.IsDevelopment())
+//    {
+//        app.UseDeveloperExceptionPage();
+//        //app.UseSwagger();
+//        //app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SampleWebAPI v1"));
+//    }
 
-    app.UseHttpsRedirection();
-    app.UseAuthentication();
-    app.UseRouting();
+//    app.UseHttpsRedirection();
+//    app.UseAuthentication();
+//    app.UseRouting();
 
-    app.UseAuthorization();
+//    app.UseAuthorization();
 
-    app.UseEndpoints(endpoints =>
-    {
-        endpoints.MapControllers();
-    });
-}
+//    app.UseEndpoints(endpoints =>
+//    {
+//        endpoints.MapControllers();
+//    });
+//}
