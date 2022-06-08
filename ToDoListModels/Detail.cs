@@ -8,28 +8,16 @@ using System.Threading.Tasks;
 
 namespace ToDoListModels
 {
-    public class SubjectDetails
+    public class Detail
     {
-        public int ID { get; set; }
-        public enum NameofSubject 
-        {
-            Assignment,
-            Exam, 
-            Lecture,
-            Lab,
-            SocialEvent
-        }
-
+        public int Id { get; set; }
         public string? Description { get; set; }
         public DateTime StartDate { get; set; }
         [Required]
-        public DateTime EndDate{ get; set; }
+        public DateTime EndDate { get; set; }
         [Required]
         public byte DaysUntilEvent { get; set; }
-        public enum PriorityLevel
-        {
-            Low, Mid, High,  
-        }
+
         public DateTime StartTime { get; set; }
         [Required]
         public DateTime EndTime { get; set; }
@@ -48,6 +36,6 @@ namespace ToDoListModels
         public Subjects? Subjects { get; set; }
         [Required]
         public int CoverTypeId { get; set; }
-        public CoverType? CoverType{ get; set; }
+        public CoverType? CoverType { get; set; }
     }
 }

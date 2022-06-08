@@ -40,6 +40,70 @@ namespace ToDoList.DataAccess.Migrations
                     b.ToTable("CoverTypes");
                 });
 
+            modelBuilder.Entity("ToDoListModels.Detail", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<double>("Cost")
+                        .HasColumnType("float");
+
+                    b.Property<int>("CoverTypeId")
+                        .HasColumnType("int");
+
+                    b.Property<byte>("DaysUntilEvent")
+                        .HasColumnType("tinyint");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("EndDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("EndTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ImageUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Location")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Notes")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("NumberOfParticpants")
+                        .HasColumnType("int");
+
+                    b.Property<byte>("PercentageOfTotalMarks")
+                        .HasColumnType("tinyint");
+
+                    b.Property<string>("RoomName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("StartDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("StartTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("SubjectsId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CoverTypeId");
+
+                    b.HasIndex("SubjectsId");
+
+                    b.ToTable("Details");
+                });
+
             modelBuilder.Entity("ToDoListModels.Subjects", b =>
                 {
                     b.Property<int>("Id")
@@ -61,6 +125,25 @@ namespace ToDoList.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Subjects");
+                });
+
+            modelBuilder.Entity("ToDoListModels.Detail", b =>
+                {
+                    b.HasOne("ToDoListModels.CoverType", "CoverType")
+                        .WithMany()
+                        .HasForeignKey("CoverTypeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ToDoListModels.Subjects", "Subjects")
+                        .WithMany()
+                        .HasForeignKey("SubjectsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("CoverType");
+
+                    b.Navigation("Subjects");
                 });
 #pragma warning restore 612, 618
         }
