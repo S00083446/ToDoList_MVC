@@ -24,50 +24,49 @@ public class DetailController : Controller
         return View(objCoverTypeList);
     }
 
-    // GET
-    public IActionResult Create()
-    {
-        return View();
-    }
+    //// GET
+    //public IActionResult Create()
+    //{
+    //    return View();
+    //}
 
-    // POST
-    [HttpPost]
-    [ValidateAntiForgeryToken]
+    //// POST
+    //[HttpPost]
+    //[ValidateAntiForgeryToken]
 
-    public IActionResult Create(CoverType obj)
-    {
+    //public IActionResult Create(CoverType obj)
+    //{ 
         
-        if (ModelState.IsValid)
-        {
-            _unitOfWork.CoverType.Add(obj);
-            _unitOfWork.Save();
-            TempData["success"] = "Cover Type created successfully";
-            return RedirectToAction("Index");
-        }
-        return View(obj);
-    }
+    //    if (ModelState.IsValid)
+    //    {
+    //        _unitOfWork.CoverType.Add(obj);
+    //        _unitOfWork.Save();
+    //        TempData["success"] = "Cover Type created successfully";
+    //        return RedirectToAction("Index");
+    //    }
+    //    return View(obj);
+    //}
 
     // GET
-    public IActionResult Edit(int? id)
+    public IActionResult Upsert(int? id)
     {
+        Detail detail = new();
         if (id == null || id == 0)
         {
-            return NotFound();
+            // create details
+            return View(detail);
         }
-        //var categoryFromDb = _db.Subjects.Find(id);
-        var coverTypeFromDbFirst = _unitOfWork.CoverType.GetFirstOrDefault(u => u.Id == id);
-        //var categoryFromDbSingle = _db.Subjects.SingleOrDefault(u => u.Id == id);
-
-        if (coverTypeFromDbFirst == null)
+        else
         {
-            return NotFound();
+            // update detils
         }
-        return View(coverTypeFromDbFirst);
+        
+        return View(detail);
     }
     // POST
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult Edit(CoverType obj)
+    public IActionResult Upsert(CoverType obj)
     {
       if (ModelState.IsValid)
         {

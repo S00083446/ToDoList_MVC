@@ -25,10 +25,25 @@ namespace ToDoList.DataAccess.Repository
         public void Update(Detail obj)
         {
             //_db.Details.Update(obj); // Drawback is we update all
-            var objFromDb = _db.Details.FirstOrDefault( u => u.Id == obj.Id); // ok once inside repository, never outside of repo
+            var objFromDb = _db.SubjectDetails.FirstOrDefault( u => u.Id == obj.Id); // ok once inside repository, never outside of repo
             if (objFromDb != null)
             {
-                // restrict update, rather thatn update all
+                //objFromDb.Title = obj.Title;
+                //objFromDb.ISBN = obj.ISBN;
+                //objFromDb.Price = obj.Price;
+                //objFromDb.Price50 = obj.Price50;
+                //objFromDb.ListPrice = obj.ListPrice;
+                //objFromDb.Price100 = obj.Price100;
+                //objFromDb.Description = obj.Description;
+                //objFromDb.SubjectId = obj.SubjectId;
+                //objFromDb.Author = obj.Author;
+                //objFromDb.CoverTypeId = obj.CoverTypeId;
+                //if (obj.ImageURL != null)
+                //{
+                //    objFromDb.ImageURL = obj.ImageURL;
+                //}
+
+                // restrict update, rather than update all
                 objFromDb.Description = obj.Description;
                 objFromDb.StartDate = obj.StartDate;
                 objFromDb.EndDate = obj.EndDate;
@@ -46,12 +61,8 @@ namespace ToDoList.DataAccess.Repository
                 {
                     objFromDb.ImageUrl = obj.ImageUrl;
                 }
-
-
-
-
             }
-            //throw new NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

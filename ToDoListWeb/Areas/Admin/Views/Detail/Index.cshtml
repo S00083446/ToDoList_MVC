@@ -5,24 +5,30 @@
         </div>
     </div>
     <div class="col-6 text-end">
-        <a asp-controller="DetailController" asp-action="Create" class="btn btn-primary">
+        <a asp-controller="Detail" asp-action="Upsert" class="btn btn-primary">
             <i class="bi bi-plus-circle">&nbsp;</i>
-            Create New Details
+            Create a new ToDo
         </a>
     </div>
 </div>
-<br />
-<br />
+<br /><br />
+
 <table class="table table-bothered table-striped" style="width:100%">
     <thead>
         <tr>
+          @*  <th>Title</th>
+            <th>ISBN</th>
+            <th>Price</th>
+            <th>Author</th>
+            <th>Category</th>
+            <th></th>*@
+
             <th>Description</th>
             <th>Start Date</th>
             <th>End Date</th>
             <th>Days Until Event</th>
             <th>Start Time</th>
             <th>End Time</th>
-            <th>Location</th>
             <th>Location</th>
             <th>Room Name</th>
             <th>Notes</th>

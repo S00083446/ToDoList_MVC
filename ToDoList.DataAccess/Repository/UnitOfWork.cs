@@ -12,7 +12,7 @@ namespace ToDoList.DataAccess.Repository
     {
         private ApplicationDbContext _db;
 
-        public UnitOfWork(ApplicationDbContext db) 
+        public UnitOfWork(ApplicationDbContext db)
         {
             _db = db;
             Subjects = new SubjectRepository(_db);
@@ -21,7 +21,7 @@ namespace ToDoList.DataAccess.Repository
         }
         public ISubjectRepository Subjects { get; private set; }
         public ICoverTypeRepository CoverType { get; private set; }
-       public IDetailRepository Detail { get; private set; }
+        public IDetailRepository Detail { get; private set; }
 
 
         public void Save()

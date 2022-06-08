@@ -58,6 +58,7 @@ namespace ToDoList.DataAccess.Migrations
                         .HasColumnType("tinyint");
 
                     b.Property<string>("Description")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("EndDate")
@@ -67,6 +68,7 @@ namespace ToDoList.DataAccess.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ImageUrl")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Location")
@@ -74,6 +76,7 @@ namespace ToDoList.DataAccess.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Notes")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("NumberOfParticpants")
@@ -101,7 +104,7 @@ namespace ToDoList.DataAccess.Migrations
 
                     b.HasIndex("SubjectsId");
 
-                    b.ToTable("Details");
+                    b.ToTable("SubjectDetails");
                 });
 
             modelBuilder.Entity("ToDoListModels.Subjects", b =>

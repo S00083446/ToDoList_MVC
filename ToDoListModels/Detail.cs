@@ -11,7 +11,7 @@ namespace ToDoListModels
     public class Detail
     {
         public int Id { get; set; }
-        public string? Description { get; set; }
+        public string Description { get; set; }
         public DateTime StartDate { get; set; }
         [Required]
         public DateTime EndDate { get; set; }
@@ -21,14 +21,15 @@ namespace ToDoListModels
         [Required]
         public DateTime EndTime { get; set; }
         [Required]
-        public string? Location { get; set; }
+        public string Location { get; set; }
         [Required]
-        public string? RoomName { get; set; }
-        public string? Notes { get; set; }
-        public double Cost { get; set; } // cut
+        public string RoomName { get; set; }
+        public string Notes { get; set; }
+
+        public double Cost { get; set; }
         public byte PercentageOfTotalMarks { get; set; }
-        public int NumberOfParticpants { get; set; } // cut
-        public string? ImageUrl { get; set; } // cut
+        public int NumberOfParticpants { get; set; }
+        public string ImageUrl { get; set; }
         [Required]
         public int SubjectsId { get; set; }
         [ForeignKey("SubjectsId")]
