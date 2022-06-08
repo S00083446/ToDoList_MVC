@@ -3,6 +3,7 @@ using ToDoList.DataAccess;
 using ToDoList.DataAccess.Repository.IRepository;
 using ToDoListModels;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace ToDoListWeb.Areas.Admin.Controllers;
 [Area("Admin")]
@@ -24,43 +25,28 @@ public class DetailController : Controller
         return View(objCoverTypeList);
     }
 
-    //// GET
-    //public IActionResult Create()
-    //{
-    //    return View();
-    //}
-
-    //// POST
-    //[HttpPost]
-    //[ValidateAntiForgeryToken]
-
-    //public IActionResult Create(CoverType obj)
-    //{ 
-        
-    //    if (ModelState.IsValid)
-    //    {
-    //        _unitOfWork.CoverType.Add(obj);
-    //        _unitOfWork.Save();
-    //        TempData["success"] = "Cover Type created successfully";
-    //        return RedirectToAction("Index");
-    //    }
-    //    return View(obj);
-    //}
-
     // GET
     public IActionResult Upsert(int? id)
     {
         Detail detail = new();
+        IEnumerable<SelectListItem> SubjectList = _unitOfWork.Subjects.GetAll().Select(
+            u => new SelectListItem
+            {
+                Text = u.Name,
+                Value = u.Id.ToString()
+            });
+
         if (id == null || id == 0)
         {
             // create details
+            ViewBag.SubjectList = SubjectList;
             return View(detail);
         }
         else
         {
             // update detils
         }
-        
+
         return View(detail);
     }
     // POST
@@ -68,7 +54,7 @@ public class DetailController : Controller
     [ValidateAntiForgeryToken]
     public IActionResult Upsert(CoverType obj)
     {
-      if (ModelState.IsValid)
+        if (ModelState.IsValid)
         {
             _unitOfWork.CoverType.Update(obj);
             _unitOfWork.Save();
