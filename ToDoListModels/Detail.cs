@@ -25,10 +25,10 @@ namespace ToDoListModels
         [Required]
         public string? RoomName { get; set; }
         public string? Notes { get; set; }
-        public double Cost { get; set; }
+        public double Cost { get; set; } // cut
         public byte PercentageOfTotalMarks { get; set; }
-        public int NumberOfParticpants { get; set; }
-        public string? ImageUrl { get; set; }
+        public int NumberOfParticpants { get; set; } // cut
+        public string? ImageUrl { get; set; } // cut
         [Required]
         public int SubjectsId { get; set; }
         [ForeignKey("SubjectsId")]
