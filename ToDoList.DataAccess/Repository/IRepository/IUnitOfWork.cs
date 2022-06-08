@@ -10,6 +10,8 @@ namespace ToDoList.DataAccess.Repository.IRepository
     {
         ISubjectRepository Subjects { get; }
         ICoverTypeRepository CoverType { get; }
+        IDetailRepository Detail { get; }
+
 
         void Save();
 

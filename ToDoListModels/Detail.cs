@@ -17,7 +17,6 @@ namespace ToDoListModels
         public DateTime EndDate { get; set; }
         [Required]
         public byte DaysUntilEvent { get; set; }
-
         public DateTime StartTime { get; set; }
         [Required]
         public DateTime EndTime { get; set; }
