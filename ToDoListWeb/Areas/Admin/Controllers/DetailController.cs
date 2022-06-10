@@ -4,6 +4,7 @@ using ToDoList.DataAccess.Repository.IRepository;
 using ToDoListModels;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using ToDoListModels.ViewModels;
 
 namespace ToDoListWeb.Areas.Admin.Controllers;
 [Area("Admin")]
@@ -13,10 +14,14 @@ public class DetailController : Controller
 {
     //private readonly ApplicationDbContext _db;
     private readonly IUnitOfWork _unitOfWork;
+    private readonly IWebHostEnvironment  _hostEnvironment;
 
-    public DetailController(IUnitOfWork unitOfWork)
+
+
+    public DetailController(IUnitOfWork unitOfWork, IWebHostEnvironment hostEnvironment)
     {
         _unitOfWork = unitOfWork;
+        _hostEnvironment = hostEnvironment;
     }
     public IActionResult Index()
     {
@@ -28,37 +33,82 @@ public class DetailController : Controller
     // GET
     public IActionResult Upsert(int? id)
     {
-        Detail detail = new();
-        IEnumerable<SelectListItem> SubjectList = _unitOfWork.Subjects.GetAll().Select(
-            u => new SelectListItem
+        //Detail detail = new();// using ViewModel instead
+        DetailsViewModel detailsVM = new()
+        {
+            Details = new(),
+            SubjectList = _unitOfWork.Subjects.GetAll().Select(i => new SelectListItem
             {
-                Text = u.Name,
-                Value = u.Id.ToString()
-            });
+                Text = i.Name,
+                Value = i.Id.ToString()
+            })
+        };
+        //IEnumerable<SelectListItem> SubjectList = _unitOfWork.Subjects.GetAll().Select(
+        //    u => new SelectListItem
+        //    {
+        //        Text = u.Name, 
+        //        Value = u.Id.ToString()
+        //    }
+        //); 
+
 
         if (id == null || id == 0)
         {
-            // create details
-            ViewBag.SubjectList = SubjectList;
-            return View(detail);
+            //// create details
+            //ViewBag.SubjectList = SubjectList;
+            //// ViewData["SubjectList"] = SubjectList;
+            return View(detailsVM);
         }
         else
         {
             // update detils
         }
 
-        return View(detail);
+        return View(detailsVM);
+
+
+
+        //DetailsViewModel detailsVM = new()
+        //{
+        //    Details = new(),
+        //    SubjectList = _unitOfWork.Subjects.GetAll().Select(i => new SelectListItem
+        //    {
+        //        Text = i.Name,
+        //        Value = i.Id.ToString()
+        //    }),
+
+
+        //    u => new SelectListItem
+        //    {
+        //        Text = u.Name,
+        //        Value = u.Id.ToString()
+        //    });
+
     }
     // POST
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult Upsert(CoverType obj)
+    public IActionResult Upsert(DetailsViewModel obj, IFormFile? file)
     {
         if (ModelState.IsValid)
         {
-            _unitOfWork.CoverType.Update(obj);
+            string wwwRoothPath = _hostEnvironment.WebRootPath;
+            if (file != null)
+            {
+                string fileName = Guid.NewGuid().ToString();
+                var uploads = Path.Combine(wwwRoothPath, @"Images\subjects");
+                var extension = Path.GetExtension(file.FileName);
+
+                //copy file that was uploaded into folder
+                using (var fileStreams = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
+                {
+                    file.CopyTo(fileStreams);
+                }
+            obj.Details.ImageUrl = @"\Images\subjects\" + fileName + extension;
+            }
+            _unitOfWork.Detail.Add(obj.Details);
             _unitOfWork.Save();
-            TempData["success"] = "Cover Type updated successfully";
+            TempData["success"] = "Todo updated successfully";
             return RedirectToAction("Index");
         }
         return View(obj);

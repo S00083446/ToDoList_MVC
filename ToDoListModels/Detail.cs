@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -29,10 +30,12 @@ namespace ToDoListModels
         public double Cost { get; set; }
         public byte PercentageOfTotalMarks { get; set; }
         public int NumberOfParticpants { get; set; }
+        [ValidateNever]
         public string ImageUrl { get; set; }
         [Required]
         public int SubjectsId { get; set; }
         [ForeignKey("SubjectsId")]
+        [ValidateNever]
         public Subjects? Subjects { get; set; }
         [Required]
         public int CoverTypeId { get; set; }

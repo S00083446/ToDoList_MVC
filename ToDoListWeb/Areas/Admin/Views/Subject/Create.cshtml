@@ -1,7 +1,8 @@
 ﻿@using ToDoListModels
 @model Subjects
 
-<form method="post">
+
+<form method="post" >
     <div class"border p-3 mt4">
         <div class"row pb-2">
             <h2 class="text-primary">Create Subject</h2>
@@ -17,9 +18,15 @@
             <label asp-for="DisplayOrder"></label>
             <input asp-for="DisplayOrder" class="form-control" />
             <span asp-validation-for="DisplayOrder" class="text-danger"></span>
-
         </div>
-        <button type="submit" class="btn btn-primary" style="width:150px">Create</button>
+
+     @*   <div class="mb-3">
+            <label asp-for="ImageUrl"></label>
+            <input type="file" id="uploadBox" class="form-control" />
+            @*<span asp-validation-for="DisplayOrder" class="text-danger"></span>*@
+       @* </div>*@
+
+        <button type="submit"  class="btn btn-primary" style="width:150px">Create</button>
         <a asp-controller="Subject" asp-action="Index" class="btn btn-primary" style="width:150px">
             Back to List
         </a>
@@ -27,8 +34,19 @@
 </form>
 
 @section Scripts{
-@{
-    <partial name="_ValidationScriptsPartial" />
-
-}
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+   @* <script>
+        function ValidateInput() {
+            if (document.getElementById("uploadBox").value == "") {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Plese Upload an Image!',
+                });
+                return false;
+            }
+            return true;
+    </script>*@
 }

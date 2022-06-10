@@ -14,4 +14,6 @@ public class Subjects
     [Range(1,100, ErrorMessage ="Display Number must be between 1 and 100")]
     public int DisplayOrder { get; set; }
 
+    //public string ImageUrl { get; set; }
+
 }

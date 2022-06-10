@@ -1,102 +1,131 @@
-﻿@model Detail
+﻿@model ToDoListModels.ViewModels.DetailsViewModel
 
-<form method="post" asp-action="Upsert">
-    <div class"border p-3 mt4">
+<form method="post" asp-action="Upsert" enctype="multipart/form-data">
+    <div class="border p-3 mt4 row">
         <div class"row pb-2">
-            <h2 class="text-primary">Edit a Todo Task</h2>
+            <h2 class="text-primary"> @(Model.Details.Id!=0?"Update": "Create") Details</h2>
             <hr />
         </div>
         @*<div asp-validation-summary="All"></div>*@
 
         <div class="mb-3">
-            <label asp-for="Description"></label>
-            <textarea asp-for="Description" rows="3" class="form-control"></textarea>
-            <span asp-validation-for="Description" class="text-danger"></span>
+            <label asp-for="Details.Description"></label>
+            <textarea asp-for="Details.Description" rows="3" class="form-control"></textarea>
+            <span asp-validation-for="Details.Description" class="text-danger"></span>
         </div>
-        <div class="mb-3">
-            <label asp-for="StartDate"></label>
-            <input asp-for="StartDate" class="form-control" />
-            <span asp-validation-for="StartDate" class="text-danger"></span>
+        <div class="mb-3 col-6">
+            <label asp-for="Details.StartDate"></label>
+            <input asp-for="Details.StartDate" class="form-control" />
+            <span asp-validation-for="Details.StartDate" class="text-danger"></span>
         </div>
-        <div class="mb-3">
-            <label asp-for="EndDate"></label>
-            <input asp-for="EndDate" class="form-control" />
-            <span asp-validation-for="EndDate" class="text-danger"></span>
+        <div class="mb-3 col-6">
+            <label asp-for="Details.EndDate"></label>
+            <input asp-for="Details.EndDate" class="form-control" />
+            <span asp-validation-for="Details.EndDate" class="text-danger"></span>
         </div>
-        <div class="mb-3">
-            <label asp-for="DaysUntilEvent"></label>
-            <input asp-for="DaysUntilEvent" class="form-control" />
-            <span asp-validation-for="DaysUntilEvent" class="text-danger"></span>
+        <div class="mb-3 col-6">
+            <label asp-for="Details.DaysUntilEvent"></label>
+            <input asp-for="Details.DaysUntilEvent" class="form-control" />
+            <span asp-validation-for="Details.DaysUntilEvent" class="text-danger"></span>
         </div>
-        <div class="mb-3">
-            <label asp-for="StartTime"></label>
-            <input asp-for="StartTime" class="form-control" />
-            <span asp-validation-for="StartTime" class="text-danger"></span>
+        <div class="mb-3 col-6">
+            <label asp-for="Details.StartTime"></label>
+            <input asp-for="Details.StartTime" class="form-control" />
+            <span asp-validation-for="Details.StartTime" class="text-danger"></span>
         </div>
-        <div class="mb-3">
-            <label asp-for="EndTime"></label>
-            <input asp-for="EndTime" class="form-control" />
-            <span asp-validation-for="EndTime" class="text-danger"></span>
+        <div class="mb-3 col-6">
+            <label asp-for="Details.EndTime"></label>
+            <input asp-for="Details.EndTime" class="form-control" />
+            <span asp-validation-for="Details.EndTime" class="text-danger"></span>
         </div>
-        <div class="mb-3">
-            <label asp-for="Location"></label>
-            <input asp-for="Location" class="form-control" />
-            <span asp-validation-for="Location" class="text-danger"></span>
+        <div class="mb-3 col-6">
+            <label asp-for="Details.Location"></label>
+            <input asp-for="Details.Location" class="form-control" />
+            <span asp-validation-for="Details.Location" class="text-danger"></span>
         </div>
-    </div>
-    <div class="mb-3">
-        <label asp-for="RoomName"></label>
-        <input asp-for="RoomName" class="form-control" />
-        <span asp-validation-for="RoomName" class="text-danger"></span>
-    </div>
-    <div class="mb-3">
-        <label asp-for="Notes"></label>
-        <textarea asp-for="Notes" rows="5" class="form-control"></textarea>
-        <span asp-validation-for="Notes" class="text-danger"></span>
-    </div>
-    <div class="mb-3">
-        <label asp-for="Cost"></label>
-        <input asp-for="Cost" class="form-control" />
-        <span asp-validation-for="Cost" class="text-danger"></span>
-    </div>
+        <div class="mb-3  col-6">
+            <label asp-for="Details.RoomName"></label>
+            <input asp-for="Details.RoomName" class="form-control" />
+            <span asp-validation-for="Details.RoomName" class="text-danger"></span>
+        </div>
+        <div class="mb-3  col-6">
+            <label asp-for="Details.Notes"></label>
+            <textarea asp-for="Details.Notes" rows="5" class="form-control"></textarea>
+            <span asp-validation-for="Details.Notes" class="text-danger"></span>
+        </div>
+        <div class="mb-3  col-6">
+            <label asp-for="Details.Cost"></label>
+            <input asp-for="Details.Cost" class="form-control" />
+            <span asp-validation-for="Details.Cost" class="text-danger"></span>
+        </div>
+        <div class="mb-3  col-6">
+            <label asp-for="Details.PercentageOfTotalMarks"></label>
+            <input asp-for="Details.PercentageOfTotalMarks" class="form-control" />
+            <span asp-validation-for="Details.PercentageOfTotalMarks" class="text-danger"></span>
+        </div>
+        <div class="mb-3  col-6">
+            <label asp-for="Details.NumberOfParticpants"></label>
+            <input asp-for="Details.NumberOfParticpants" class="form-control" />
+            <span asp-validation-for="Details.NumberOfParticpants" class="text-danger"></span>
+        </div>
+        <div class="mb-3  col-6">
+            <label asp-for="Details.ImageUrl"></label>
+            <input type="file" id="uploadBox" name="file" class="form-control" />
+            <span asp-validation-for="Details.ImageUrl" class="text-danger"></span>
+        </div>
+        <div class="mb-3  col-6">
+            <label asp-for="Details.NumberOfParticpants"></label>
+            <input asp-for="Details.NumberOfParticpants" class="form-control" />
+            <span asp-validation-for="Details.NumberOfParticpants" class="text-danger"></span>
+        </div>
 
-    <div class="mb-3">
-        <label asp-for="PercentageOfTotalMarks"></label>
-        <input asp-for="PercentageOfTotalMarks" class="form-control" />
-        <span asp-validation-for="PercentageOfTotalMarks" class="text-danger"></span>
-    </div>
-    <div class="mb-3">
-        <label asp-for="NumberOfParticpants"></label>
-        <input asp-for="NumberOfParticpants" class="form-control" />
-        <span asp-validation-for="NumberOfParticpants" class="text-danger"></span>
-    </div>
-    <div class="mb-3">
-        <label asp-for="ImageUrl"></label>
-        <input asp-for="ImageUrl" class="form-control" />
-        <span asp-validation-for="ImageUrl" class="text-danger"></span>
-    </div>
-    <div class="mb-3">
-        <label asp-for="NumberOfParticpants"></label>
-        <input asp-for="NumberOfParticpants" class="form-control" />
-        <span asp-validation-for="NumberOfParticpants" class="text-danger"></span>
-    </div>
+        <div class="mb-3  col-6">
+            <label asp-for="Details.SubjectsId"></label>
+            <select asp-for="Details.SubjectsId" asp-items="@Model.SubjectList" class="form-select">
+                <option disabled selected>-- Select Subject --</option>
+            </select>
+            <span asp-validation-for="Details.SubjectsId" class="text-danger"></span>
+        </div>
 
-     <div class="mb-3">
+        @* same functionality as ViewBag *@
+        @*    <div class="mb-3">
         <label asp-for="SubjectsId"></label>
-        <select asp-for="SubjectsId" asp-items="ViewBag.SubjectList" class="form-select">
-            <option disabled selected>-- Select Subject --</option>
-        </select>
-        <span asp-validation-for="SubjectsId" class="text-danger"></span>
+        <select asp-for="SubjectsId" asp-items="@(ViewData["SubjectList"]) as IEnumerable<SelectListItem>" class="form-select">
+        <option disabled selected>-- Select Subject --</option>
+        </select>*@
     </div>
-    <button type="submit" class="btn btn-primary" style="width:150px">Update</button>
-    <a asp-controller="CoverType" asp-action="Index" class="btn btn-primary" style="width:150px">
-        Back to List
-    </a>
+    <div class="col-12">
+        @if (Model.Details.Id != 0)
+        {
+            <button type="submit" class="btn btn-primary" style="width:150px">Update</button>
+
+        }
+        else
+        {
+            <button type="submit" onclick="return ValidateInput()" class="btn btn-primary" style="width:150px">Create</button>
+
+        }
+        <a asp-controller="CoverType" asp-action="Index" class="btn btn-primary" style="width:150px">
+            Back to List
+        </a>
+    </div>
 </form>
 
 @section Scripts{
     @{
-        <partial name="_ValidationScriptsPartial" />
-
+    <partial name="_ValidationScriptsPartial" />
     }
+    <script>
+        function ValidateInput() {
+            if (document.getElementById("uploadBox").value == "") {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Plese Upload an Image!',
+                });
+                return false;
+            }
+            return true;
+    </script>
     }
+    
