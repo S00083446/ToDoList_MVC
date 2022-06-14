@@ -16,8 +16,6 @@ public class DetailController : Controller
     private readonly IUnitOfWork _unitOfWork;
     private readonly IWebHostEnvironment _hostEnvironment;
 
-
-
     public DetailController(IUnitOfWork unitOfWork, IWebHostEnvironment hostEnvironment)
     {
         _unitOfWork = unitOfWork;
@@ -62,10 +60,12 @@ public class DetailController : Controller
         }
         else
         {
-            // update detils
+            //Retrieve toDo to update detils
+            detailsVM.Details = _unitOfWork.Detail.GetFirstOrDefault(u => u.Id == id);
+            return View(detailsVM);
+
         }
 
-        return View(detailsVM);
         //DetailsViewModel detailsVM = new()
         //{
         //    Details = new(),
