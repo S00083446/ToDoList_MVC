@@ -1,7 +1,7 @@
 ﻿<div class="container p-3">
     <div class="row pt-4">
         <div class="col-6">
-            <h2 class="text-primary">Details List</h2>
+            <h2 class="text-primary">To Do List</h2>
         </div>
     </div>
     <div class="col-6 text-end">
@@ -13,7 +13,7 @@
 </div>
 <br /><br />
 
-<table class="table table-bothered table-striped" style="width:100%">
+<table id="tblData" class="table table-bothered table-striped" style="width:100%">
     <thead>
         <tr>
           @*  <th>Title</th>
@@ -37,8 +37,11 @@
             <th>Number of Participants</th>
             <th>Image URL</th>
             <th>Subject </th>
-            <th></th>
+            @*<th></th>*@
         </tr>
     </thead>
 </table>
 
+@section Scripts{
+    <script src="~/js/detail.js"></script>
+}

@@ -17,6 +17,7 @@ namespace ToDoList.DataAccess.Repository
         public Repository(ApplicationDbContext db)
         {
             _db = db;
+            //_db.SubjectDetails.Include(u => u.Subjects);  only for ApplicationDB Context
             this.dbSet = _db.Set<T>();
         }
         public void Add(T entity)
@@ -25,10 +26,17 @@ namespace ToDoList.DataAccess.Repository
             //throw new NotImplementedException();
         }
 
-        public IEnumerable<T> GetAll()//Expression<Func<T, bool>>? filter=null, string? includeProperties = null)
+        //includeProp - "Category, Subjects", exact case
+        public IEnumerable<T> GetAll(string? includeProperties = null)//Expression<Func<T, bool>>? filter=null, string? includeProperties = null)
         {
             IQueryable<T> query = dbSet;
-
+            if (includeProperties != null)
+            {
+                foreach (var includeProp in includeProperties.Split(new char[] {','}, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeProp); 
+                }
+            }
             //if (filter != null)
             //{
             //    query = query.Where(filter);
@@ -45,21 +53,28 @@ namespace ToDoList.DataAccess.Repository
         }
 
      
-        public T GetFirstOrDefault(Expression<Func<T, bool>> filter)
+        public T GetFirstOrDefault(Expression<Func<T, bool>> filter, string? includeProperties = null)
         {
             //if (tracked)
             //{
                 IQueryable<T> query = dbSet;
 
                 query = query.Where(filter);
-                //if (includeProperties != null)
-                //{
-                //    foreach (var includeProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
-                //    {
-                //        query = query.Include(includeProp);
-                //    }
-                //}
-                return query.FirstOrDefault();
+            if (includeProperties != null)
+            {
+                foreach (var includeProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+                {
+                    query = query.Include(includeProp);
+                }
+            }
+            //if (includeProperties != null)
+            //{
+            //    foreach (var includeProp in includeProperties.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries))
+            //    {
+            //        query = query.Include(includeProp);
+            //    }
+            //}
+            return query.FirstOrDefault();
             //}
             //else
             //{
