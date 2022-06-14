@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0QaxS4k8MtsFfyRo133/RMieEf9Y763mDw+9P4oTYjo=",
+  "Hash": "E/L2nVbUTKbQoqXriow4L3c1aPWx3tHSz2fyIRSsp9w=",
   "Source": "ToDoListWeb",
   "BasePath": "_content/ToDoListWeb",
   "Mode": "Default",
@@ -100,6 +100,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoListWeb\\wwwroot\\Images\\subjects\\0feae264-0d4a-43df-a40f-94e44a186b4c.jpg",
+      "SourceId": "ToDoListWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoListWeb\\wwwroot\\",
+      "BasePath": "_content/ToDoListWeb",
+      "RelativePath": "Images/subjects/0feae264-0d4a-43df-a40f-94e44a186b4c.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\subjects\\0feae264-0d4a-43df-a40f-94e44a186b4c.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoListWeb\\wwwroot\\Images\\subjects\\18b849d0-0d3e-45a6-b41d-993c569ba201.jpg",
+      "SourceId": "ToDoListWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoListWeb\\wwwroot\\",
+      "BasePath": "_content/ToDoListWeb",
+      "RelativePath": "Images/subjects/18b849d0-0d3e-45a6-b41d-993c569ba201.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\subjects\\18b849d0-0d3e-45a6-b41d-993c569ba201.jpg"
     },
     {
       "Identity": "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoListWeb\\wwwroot\\js\\site.js",

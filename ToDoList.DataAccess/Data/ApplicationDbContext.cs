@@ -10,7 +10,6 @@ public class ApplicationDbContext : DbContext
 
     }
     public DbSet<Subjects> Subjects { get; set; }
-    public DbSet<CoverType> CoverTypes { get; set; }
     public DbSet<Detail> SubjectDetails { get; set; }
 }
 

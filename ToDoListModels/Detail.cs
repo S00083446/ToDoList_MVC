@@ -37,8 +37,5 @@ namespace ToDoListModels
         [ForeignKey("SubjectsId")]
         [ValidateNever]
         public Subjects? Subjects { get; set; }
-        [Required]
-        public int CoverTypeId { get; set; }
-        public CoverType? CoverType { get; set; }
     }
 }

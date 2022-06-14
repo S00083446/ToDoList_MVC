@@ -14,7 +14,7 @@ public class DetailController : Controller
 {
     //private readonly ApplicationDbContext _db;
     private readonly IUnitOfWork _unitOfWork;
-    private readonly IWebHostEnvironment  _hostEnvironment;
+    private readonly IWebHostEnvironment _hostEnvironment;
 
 
 
@@ -25,9 +25,9 @@ public class DetailController : Controller
     }
     public IActionResult Index()
     {
-        IEnumerable<CoverType> objCoverTypeList = _unitOfWork.CoverType.GetAll();
+        IEnumerable<Subjects> objSubjectsToList = _unitOfWork.Subjects.GetAll();
 
-        return View(objCoverTypeList);
+        return View(objSubjectsToList);
     }
 
     // GET
@@ -104,7 +104,7 @@ public class DetailController : Controller
                 {
                     file.CopyTo(fileStreams);
                 }
-            obj.Details.ImageUrl = @"\Images\subjects\" + fileName + extension;
+                obj.Details.ImageUrl = @"\Images\subjects\" + fileName + extension;
             }
             _unitOfWork.Detail.Add(obj.Details);
             _unitOfWork.Save();
@@ -113,45 +113,45 @@ public class DetailController : Controller
         }
         return View(obj);
     }
-    // GET
-    public IActionResult Delete(int? id)
-    {
-        if (id == null || id == 0)
-        {
-            return NotFound();
-        }
-        //var categoryFromDb = _db.Subjects.Find(id);
-
-        //var categoryFromFirst = _db.FirstOrDefault(u => u.Id == id);
-        //var categoryFromDbFirst = _unitOfWork.Subjects.GetFirstOrDefault(u => u.Id == id);
-        var coverTypeFromDbFirst = _unitOfWork.CoverType.GetFirstOrDefault(u => u.Id == id);
-
-        //var categoryFromDbSingle = _db.Subjects.SingleOrDefault(u => u.Id == id);
-
-        if (coverTypeFromDbFirst == null)
-        {
-            return NotFound();
-        }
-        return View(coverTypeFromDbFirst);
-    }
-    // POST
-    [HttpPost]
-    [ValidateAntiForgeryToken]
-
-    public IActionResult DeletePost(int? id)
-    {
-        var obj = _unitOfWork.CoverType.GetFirstOrDefault(u => u.Id == id);// (u => u.Id == id);
-
-        if (obj == null)
-        {
-            return NotFound();
-        }
-        _unitOfWork.CoverType.Remove(obj);
-        _unitOfWork.Save();
-        TempData["success"] = "Cover Type deleted successfully";
-        return RedirectToAction("Index");
-    }
 }
+    // GET
+    //public IActionResult Delete(int? id)
+    //{
+    //    if (id == null || id == 0)
+    //    {
+    //        return NotFound();
+    //    }
+    //    //var categoryFromDb = _db.Subjects.Find(id);
+
+    //    //var categoryFromFirst = _db.FirstOrDefault(u => u.Id == id);
+    //    //var categoryFromDbFirst = _unitOfWork.Subjects.GetFirstOrDefault(u => u.Id == id);
+    //    //var coverTypeFromDbFirst = _unitOfWork.CoverType.GetFirstOrDefault(u => u.Id == id);
+
+    //    //var categoryFromDbSingle = _db.Subjects.SingleOrDefault(u => u.Id == id);
+
+    //    //if (coverTypeFromDbFirst == null)
+    //    //{
+    //    //    return NotFound();
+    //    //}
+    //    //return View(coverTypeFromDbFirst);
+    //}
+    // POST
+    //[HttpPost]
+    //[ValidateAntiForgeryToken]
+
+    //public IActionResult DeletePost(int? id)
+    //{
+    //    var obj = _unitOfWork.CoverType.GetFirstOrDefault(u => u.Id == id);// (u => u.Id == id);
+
+    //    if (obj == null)
+    //    {
+    //        return NotFound();
+    //    }
+    //    _unitOfWork.CoverType.Remove(obj);
+    //    _unitOfWork.Save();
+    //    TempData["success"] = "Cover Type deleted successfully";
+    //    return RedirectToAction("Index");
+    //}
 
 
 

@@ -22,24 +22,6 @@ namespace ToDoList.DataAccess.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("ToDoListModels.CoverType", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("CoverTypes");
-                });
-
             modelBuilder.Entity("ToDoListModels.Detail", b =>
                 {
                     b.Property<int>("Id")
@@ -50,9 +32,6 @@ namespace ToDoList.DataAccess.Migrations
 
                     b.Property<double>("Cost")
                         .HasColumnType("float");
-
-                    b.Property<int>("CoverTypeId")
-                        .HasColumnType("int");
 
                     b.Property<byte>("DaysUntilEvent")
                         .HasColumnType("tinyint");
@@ -100,8 +79,6 @@ namespace ToDoList.DataAccess.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CoverTypeId");
-
                     b.HasIndex("SubjectsId");
 
                     b.ToTable("SubjectDetails");
@@ -121,10 +98,6 @@ namespace ToDoList.DataAccess.Migrations
                     b.Property<int>("DisplayOrder")
                         .HasColumnType("int");
 
-                    b.Property<string>("ImageUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -136,19 +109,11 @@ namespace ToDoList.DataAccess.Migrations
 
             modelBuilder.Entity("ToDoListModels.Detail", b =>
                 {
-                    b.HasOne("ToDoListModels.CoverType", "CoverType")
-                        .WithMany()
-                        .HasForeignKey("CoverTypeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("ToDoListModels.Subjects", "Subjects")
                         .WithMany()
                         .HasForeignKey("SubjectsId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("CoverType");
 
                     b.Navigation("Subjects");
                 });

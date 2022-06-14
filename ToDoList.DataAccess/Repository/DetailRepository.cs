@@ -56,7 +56,6 @@ namespace ToDoList.DataAccess.Repository
                 objFromDb.PercentageOfTotalMarks = obj.PercentageOfTotalMarks;
                 objFromDb.NumberOfParticpants = obj.NumberOfParticpants;
                 objFromDb.SubjectsId = obj.SubjectsId;
-                objFromDb.CoverTypeId = obj.CoverTypeId;
                 if (obj.ImageUrl != null)
                 {
                     objFromDb.ImageUrl = obj.ImageUrl;
