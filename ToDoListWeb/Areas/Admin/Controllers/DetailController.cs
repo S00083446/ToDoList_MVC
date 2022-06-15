@@ -83,6 +83,8 @@ public class DetailController : Controller
         //    });
 
     }
+
+
     // POST
     [HttpPost]
     [ValidateAntiForgeryToken]
@@ -131,13 +133,88 @@ public class DetailController : Controller
         return View(obj);
     }
 
+   // GET
+    //public IActionResult Delete(int? id)
+    //{
+    //    if (id == null || id == 0)
+    //    {
+    //        return NotFound();
+    //    }
+    //    //var categoryFromDb = _db.Subjects.Find(id);
+
+    //    //var categoryFromFirst = _db.FirstOrDefault(u => u.Id == id);
+    //    var categoryFromDbFirst = _unitOfWork.Subjects.GetFirstOrDefault(u => u.Id == id);
+    //    //var coverTypeFromDbFirst = _unitOfWork.CoverType.GetFirstOrDefault(u => u.Id == id);
+
+    //    //var categoryFromDbSingle = _db.Subjects.SingleOrDefault(u => u.Id == id);
+
+    //    if (categoryFromDbFirst == null)
+    //    {
+    //        return NotFound();
+    //    }
+    //    return View(categoryFromDbFirst);
+    //}
+
+    //POST
+    [HttpPost, ActionName("Delete")]
+    [ValidateAntiForgeryToken]
+    public IActionResult DeletePost(int? id)
+    {
+        var obj = _unitOfWork.Detail.GetFirstOrDefault(u => u.Id == id);// (u => u.Id == id);
+
+        if (obj == null)
+        {
+            return Json(new { success = false, message = "Error while deleting" });
+        }
+
+        var oldImagePath = Path.Combine(_hostEnvironment.WebRootPath, obj.ImageUrl.TrimStart('\\'));
+        if (System.IO.File.Exists(oldImagePath))
+        {
+            System.IO.File.Delete(oldImagePath);
+        }
+        _unitOfWork.Detail.Remove(obj);
+        _unitOfWork.Save();
+        //TempData["success"] = "Cover Type deleted successfully";
+        return Json(new { success = true, message = "Delete Successfull" });
+
+        //return RedirectToAction("Index");
+    }
+
+
+
+
     #region API CALLS
     [HttpGet]
     public IActionResult GetAll()
     {
-        var toDoList = _unitOfWork.Detail.GetAll(includeProperties:"Subjects");
+        var toDoList = _unitOfWork.Detail.GetAll(includeProperties: "Subjects");
         return Json(new { data = toDoList });
     }
+
+    //POST
+    [HttpDelete]
+    public IActionResult Delete(int? id)
+    {
+        var obj = _unitOfWork.Detail.GetFirstOrDefault(u => u.Id == id);// (u => u.Id == id);
+
+        if (obj == null)
+        {
+            return Json(new { success = false, message = "Error while deleting" });
+        }
+
+        var oldImagePath = Path.Combine(_hostEnvironment.WebRootPath, obj.ImageUrl.TrimStart('\\'));
+        if (System.IO.File.Exists(oldImagePath))
+        {
+            System.IO.File.Delete(oldImagePath);
+        }
+        _unitOfWork.Detail.Remove(obj);
+        _unitOfWork.Save();
+        //TempData["success"] = "Cover Type deleted successfully";
+        return Json(new { success = true, message = "Delete Successfull" });
+
+        //return RedirectToAction("Index");
+    }
+
     #endregion
 }
 // GET
