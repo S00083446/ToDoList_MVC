@@ -104,8 +104,8 @@
                         <button type="submit" onclick="return ValidateInput()" class="btn btn-primary" style="width:150px">Create</button>
 
                     }
-                         <a asp-controller="Detail" asp-action="Index" class="btn btn-primary" style="width:150px">
-                    Back to List
+                    <a asp-controller="Detail" asp-action="Index" class="btn btn-primary" style="width:150px">
+                        Back to List
                     </a>
                 </div>
             </div>
@@ -123,6 +123,12 @@
         <partial name="_ValidationScriptsPartial" />
     }
     <script>
+        tinymce.init({
+            selector: 'textarea',
+            plugins: 'a11ychecker advcode casechange export formatpainter image editimage linkchecker autolink lists checklist media mediaembed pageembed permanentpen powerpaste table advtable tableofcontents tinymcespellchecker',
+            toolbar_mode: 'floating',
+        });
+
         function ValidateInput() {
             if (document.getElementById("uploadBox").value == "") {
                 Swal.fire({
@@ -133,5 +139,6 @@
                 return false;
             }
             return true;
+        }
     </script>
     }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "LzdOLqkx6rRzHc4vBz74qaJnJkdvoKFBrNDysGus/E4=",
+  "Hash": "+299YLHnRoIDoaH2yMq+BL7Tx+R8nQFqmZ08+LM/hmw=",
   "Source": "ToDoListWeb",
   "BasePath": "_content/ToDoListWeb",
   "Mode": "Default",
@@ -100,23 +100,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
-    },
-    {
-      "Identity": "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoListWeb\\wwwroot\\Images\\subjects\\75766195-4212-4d3c-8479-68b9aedd8e65.jpg",
-      "SourceId": "ToDoListWeb",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoListWeb\\wwwroot\\",
-      "BasePath": "_content/ToDoListWeb",
-      "RelativePath": "Images/subjects/75766195-4212-4d3c-8479-68b9aedd8e65.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Images\\subjects\\75766195-4212-4d3c-8479-68b9aedd8e65.jpg"
     },
     {
       "Identity": "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoListWeb\\wwwroot\\Images\\subjects\\98503cfe-30f9-4f24-a481-abb85d2b7def.jpg",
