@@ -1,126 +1,126 @@
 ﻿@model ToDoListModels.ViewModels.DetailsViewModel
 
 <form method="post" asp-action="Upsert" enctype="multipart/form-data">
-    <input asp-for="Details.Id" hidden/>
-    <input asp-for="Details.ImageUrl" hidden/>
+    <input asp-for="Details.Id" hidden />
+    <input asp-for="Details.ImageUrl" hidden />
 
     <div class="row">
         <div class="col-10">
+            <div class="border p-3 mt-4 row">
+                <div class="col-12 pb-2">
+                    <h2 class="text-primary"> @(Model.Details.Id!=0?"Update": "Create") a ToDo</h2>
+                    <hr />
+                </div>
+                @*<div asp-validation-summary="All"></div>*@
 
-        </div>
-        <div class="col-2">
+                <div class="mb-3">
+                    <label asp-for="Details.Description"></label>
+                    <textarea asp-for="Details.Description" rows="3" class="form-control"></textarea>
+                    <span asp-validation-for="Details.Description" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-6">
+                    <label asp-for="Details.StartDate"></label>
+                    <input asp-for="Details.StartDate" class="form-control" />
+                    <span asp-validation-for="Details.StartDate" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-6">
+                    <label asp-for="Details.EndDate"></label>
+                    <input asp-for="Details.EndDate" class="form-control" />
+                    <span asp-validation-for="Details.EndDate" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-6">
+                    <label asp-for="Details.DaysUntilEvent"></label>
+                    <input asp-for="Details.DaysUntilEvent" class="form-control" />
+                    <span asp-validation-for="Details.DaysUntilEvent" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-6">
+                    <label asp-for="Details.StartTime"></label>
+                    <input asp-for="Details.StartTime" class="form-control" />
+                    <span asp-validation-for="Details.StartTime" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-6">
+                    <label asp-for="Details.EndTime"></label>
+                    <input asp-for="Details.EndTime" class="form-control" />
+                    <span asp-validation-for="Details.EndTime" class="text-danger"></span>
+                </div>
+                <div class="mb-3 col-6">
+                    <label asp-for="Details.Location"></label>
+                    <input asp-for="Details.Location" class="form-control" />
+                    <span asp-validation-for="Details.Location" class="text-danger"></span>
+                </div>
+                <div class="mb-3  col-6">
+                    <label asp-for="Details.RoomName"></label>
+                    <input asp-for="Details.RoomName" class="form-control" />
+                    <span asp-validation-for="Details.RoomName" class="text-danger"></span>
+                </div>
+                <div class="mb-3  col-6">
+                    <label asp-for="Details.Notes"></label>
+                    <textarea asp-for="Details.Notes" rows="5" class="form-control"></textarea>
+                    <span asp-validation-for="Details.Notes" class="text-danger"></span>
+                </div>
+                <div class="mb-3  col-6">
+                    <label asp-for="Details.Cost"></label>
+                    <input asp-for="Details.Cost" class="form-control" />
+                    <span asp-validation-for="Details.Cost" class="text-danger"></span>
+                </div>
+                <div class="mb-3  col-6">
+                    <label asp-for="Details.PercentageOfTotalMarks"></label>
+                    <input asp-for="Details.PercentageOfTotalMarks" class="form-control" />
+                    <span asp-validation-for="Details.PercentageOfTotalMarks" class="text-danger"></span>
+                </div>
+                <div class="mb-3  col-6">
+                    <label asp-for="Details.NumberOfParticpants"></label>
+                    <input asp-for="Details.NumberOfParticpants" class="form-control" />
+                    <span asp-validation-for="Details.NumberOfParticpants" class="text-danger"></span>
+                </div>
+                <div class="mb-3  col-6">
+                    <label asp-for="Details.ImageUrl"></label>
+                    <input type="file" id="uploadBox" name="file" class="form-control" />
+                    <span asp-validation-for="Details.ImageUrl" class="text-danger"></span>
+                </div>
 
-        </div>
-    </div>
-    
-    <div class="border p-3 mt4 row">
-        <div class"col-12 pb-2">
-            <h2 class="text-primary"> @(Model.Details.Id!=0?"Update": "Create") a ToDo</h2>
-            <hr />
-        </div>
-        @*<div asp-validation-summary="All"></div>*@
+                <div class="mb-3  col-6">
+                    <label asp-for="Details.SubjectsId"></label>
+                    <select asp-for="Details.SubjectsId" asp-items="@Model.SubjectList" class="form-select">
+                        <option disabled selected>-- Select Subject --</option>
+                    </select>
+                    <span asp-validation-for="Details.SubjectsId" class="text-danger"></span>
+                </div>
 
-        <div class="mb-3">
-            <label asp-for="Details.Description"></label>
-            <textarea asp-for="Details.Description" rows="3" class="form-control"></textarea>
-            <span asp-validation-for="Details.Description" class="text-danger"></span>
-        </div>
-        <div class="mb-3 col-6">
-            <label asp-for="Details.StartDate"></label>
-            <input asp-for="Details.StartDate" class="form-control" />
-            <span asp-validation-for="Details.StartDate" class="text-danger"></span>
-        </div>
-        <div class="mb-3 col-6">
-            <label asp-for="Details.EndDate"></label>
-            <input asp-for="Details.EndDate" class="form-control" />
-            <span asp-validation-for="Details.EndDate" class="text-danger"></span>
-        </div>
-        <div class="mb-3 col-6">
-            <label asp-for="Details.DaysUntilEvent"></label>
-            <input asp-for="Details.DaysUntilEvent" class="form-control" />
-            <span asp-validation-for="Details.DaysUntilEvent" class="text-danger"></span>
-        </div>
-        <div class="mb-3 col-6">
-            <label asp-for="Details.StartTime"></label>
-            <input asp-for="Details.StartTime" class="form-control" />
-            <span asp-validation-for="Details.StartTime" class="text-danger"></span>
-        </div>
-        <div class="mb-3 col-6">
-            <label asp-for="Details.EndTime"></label>
-            <input asp-for="Details.EndTime" class="form-control" />
-            <span asp-validation-for="Details.EndTime" class="text-danger"></span>
-        </div>
-        <div class="mb-3 col-6">
-            <label asp-for="Details.Location"></label>
-            <input asp-for="Details.Location" class="form-control" />
-            <span asp-validation-for="Details.Location" class="text-danger"></span>
-        </div>
-        <div class="mb-3  col-6">
-            <label asp-for="Details.RoomName"></label>
-            <input asp-for="Details.RoomName" class="form-control" />
-            <span asp-validation-for="Details.RoomName" class="text-danger"></span>
-        </div>
-        <div class="mb-3  col-6">
-            <label asp-for="Details.Notes"></label>
-            <textarea asp-for="Details.Notes" rows="5" class="form-control"></textarea>
-            <span asp-validation-for="Details.Notes" class="text-danger"></span>
-        </div>
-        <div class="mb-3  col-6">
-            <label asp-for="Details.Cost"></label>
-            <input asp-for="Details.Cost" class="form-control" />
-            <span asp-validation-for="Details.Cost" class="text-danger"></span>
-        </div>
-        <div class="mb-3  col-6">
-            <label asp-for="Details.PercentageOfTotalMarks"></label>
-            <input asp-for="Details.PercentageOfTotalMarks" class="form-control" />
-            <span asp-validation-for="Details.PercentageOfTotalMarks" class="text-danger"></span>
-        </div>
-        <div class="mb-3  col-6">
-            <label asp-for="Details.NumberOfParticpants"></label>
-            <input asp-for="Details.NumberOfParticpants" class="form-control" />
-            <span asp-validation-for="Details.NumberOfParticpants" class="text-danger"></span>
-        </div>
-        <div class="mb-3  col-6">
-            <label asp-for="Details.ImageUrl"></label>
-            <input type="file" id="uploadBox" name="file" class="form-control" />
-            <span asp-validation-for="Details.ImageUrl" class="text-danger"></span>
-        </div>
-
-        <div class="mb-3  col-6">
-            <label asp-for="Details.SubjectsId"></label>
-            <select asp-for="Details.SubjectsId" asp-items="@Model.SubjectList" class="form-select">
+                @* same functionality as ViewBag *@
+                @*    <div class="mb-3">
+                <label asp-for="SubjectsId"></label>
+                <select asp-for="SubjectsId" asp-items="@(ViewData["SubjectList"]) as IEnumerable<SelectListItem>" class="form-select">
                 <option disabled selected>-- Select Subject --</option>
-            </select>
-            <span asp-validation-for="Details.SubjectsId" class="text-danger"></span>
+                </select>*@
+                <div class="col-12">
+                    @if (Model.Details.Id != 0)
+                    {
+                        <button type="submit" class="btn btn-primary" style="width:150px">Update</button>
+
+                    }
+                    else
+                    {
+                        <button type="submit" onclick="return ValidateInput()" class="btn btn-primary" style="width:150px">Create</button>
+
+                    }
+                    @*     <a asp-controller="CoverType" asp-action="Index" class="btn btn-primary" style="width:150px">
+                    Back to List
+                    </a>*@
+                </div>
+            </div>
         </div>
-
-        @* same functionality as ViewBag *@
-        @*    <div class="mb-3">
-        <label asp-for="SubjectsId"></label>
-        <select asp-for="SubjectsId" asp-items="@(ViewData["SubjectList"]) as IEnumerable<SelectListItem>" class="form-select">
-        <option disabled selected>-- Select Subject --</option>
-        </select>*@
+        <div class="col-2 pt-4">
+            <img src="@Model.Details.ImageUrl"
+                 width="100%" style="border-radius:5px; border: 1px solid #bbb9b9" />
+        </div>
     </div>
-    <div class="col-12">
-        @if (Model.Details.Id != 0)
-        {
-            <button type="submit" class="btn btn-primary" style="width:150px">Update</button>
 
-        }
-        else
-        {
-            <button type="submit" onclick="return ValidateInput()" class="btn btn-primary" style="width:150px">Create</button>
-
-        }
-   @*     <a asp-controller="CoverType" asp-action="Index" class="btn btn-primary" style="width:150px">
-            Back to List
-        </a>*@
-    </div>
 </form>
 
 @section Scripts{
     @{
-    <partial name="_ValidationScriptsPartial" />
+        <partial name="_ValidationScriptsPartial" />
     }
     <script>
         function ValidateInput() {
@@ -135,4 +135,3 @@
             return true;
     </script>
     }
-    
