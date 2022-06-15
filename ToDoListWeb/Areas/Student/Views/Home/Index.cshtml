@@ -1,8 +1,36 @@
-﻿@{
+﻿@*@{
     ViewData["Title"] = "Home Page";
-}
+}*@
 
-<div class="text-center">
-    <h1 class="display-4">Student Companion</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+@model IEnumerable<Detail> // small 'm' here
+
+
+<div class="row pb-3">
+    @foreach (var detail in Model) // capital 'M' here, lg - large, md - medium
+    {
+        <div class="col-lg-3 col-md-6">
+            <div class="row p-2">
+                <div class="card p-1" style="border: 1px solid black; border-radius: 5px;">
+                    <img src="@detail.ImageUrl" class="card-img-top rounded" />
+                    <div class="pl-1">
+                        <p class="card-title h5 text-primary">@detail.Description</p>
+                        <p class="card-title h5 text-info">@detail.Location</p>
+                    </div>
+
+                    <div class="pl-1">
+                        <p>Cost: <b>$@detail.Cost.ToString("0.00")</b> </p>
+                    </div>
+                    <div class="pl-1">
+                        <p class="card-title h5 text-primary">@detail.EndDate</p>
+                    </div>
+                </div>
+                <div>
+                    <a asp-action="Details" class="btn btn-primary form-control" asp-route-id="@detail.Id">
+                        Details
+                    </a>
+
+                    </div>
+            </div>
+        </div>
+    }
 </div>

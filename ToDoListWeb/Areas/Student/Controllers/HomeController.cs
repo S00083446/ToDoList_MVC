@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using ToDoList.DataAccess.Repository.IRepository;
 using ToDoListModels;
 
 namespace ToDoListWeb.Areas.Student.Controllers
@@ -8,15 +9,18 @@ namespace ToDoListWeb.Areas.Student.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IUnitOfWork unitOfWork)
         {
             _logger = logger;
+            _unitOfWork = unitOfWork;
         }
 
         public IActionResult Index()
         {
-            return View();
+            IEnumerable<Detail> detailList = _unitOfWork.Detail.GetAll(includeProperties:"Subjects");
+            return View(detailList);
         }
 
         public IActionResult Privacy()
