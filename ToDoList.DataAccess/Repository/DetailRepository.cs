@@ -61,7 +61,7 @@ namespace ToDoList.DataAccess.Repository
                     objFromDb.ImageUrl = obj.ImageUrl;
                 }
             }
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
     }
 }

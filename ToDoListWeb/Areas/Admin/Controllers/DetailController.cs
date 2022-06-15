@@ -97,6 +97,15 @@ public class DetailController : Controller
                 var uploads = Path.Combine(wwwRoothPath, @"Images\subjects");
                 var extension = Path.GetExtension(file.FileName);
 
+                if (obj.Details.ImageUrl != null)
+                {
+                    var oldImagePath = Path.Combine(wwwRoothPath, obj.Details.ImageUrl.TrimStart('\\'));
+                    if (System.IO.File.Exists(oldImagePath))
+                    {
+                        System.IO.File.Delete(oldImagePath);
+                    }
+                }
+
                 //copy file that was uploaded into folder
                 using (var fileStreams = new FileStream(Path.Combine(uploads, fileName + extension), FileMode.Create))
                 {
@@ -104,7 +113,17 @@ public class DetailController : Controller
                 }
                 obj.Details.ImageUrl = @"\Images\subjects\" + fileName + extension;
             }
-            _unitOfWork.Detail.Add(obj.Details);
+
+            if (obj.Details.Id == 0)
+            {
+                _unitOfWork.Detail.Add(obj.Details);
+            }
+            else
+            {
+                _unitOfWork.Detail.Update(obj.Details);
+            }
+
+            //_unitOfWork.Detail.Add(obj.Details);
             _unitOfWork.Save();
             TempData["success"] = "Todo updated successfully";
             return RedirectToAction("Index");

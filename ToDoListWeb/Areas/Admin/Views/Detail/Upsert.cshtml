@@ -1,8 +1,20 @@
 ﻿@model ToDoListModels.ViewModels.DetailsViewModel
 
 <form method="post" asp-action="Upsert" enctype="multipart/form-data">
+    <input asp-for="Details.Id" hidden/>
+    <input asp-for="Details.ImageUrl" hidden/>
+
+    <div class="row">
+        <div class="col-10">
+
+        </div>
+        <div class="col-2">
+
+        </div>
+    </div>
+    
     <div class="border p-3 mt4 row">
-        <div class"row pb-2">
+        <div class"col-12 pb-2">
             <h2 class="text-primary"> @(Model.Details.Id!=0?"Update": "Create") a ToDo</h2>
             <hr />
         </div>
