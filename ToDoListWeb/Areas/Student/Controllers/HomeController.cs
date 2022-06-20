@@ -19,9 +19,22 @@ namespace ToDoListWeb.Areas.Student.Controllers
 
         public IActionResult Index()
         {
-            IEnumerable<Detail> detailList = _unitOfWork.Detail.GetAll(includeProperties:"Subjects");
+            IEnumerable<Detail> detailList = _unitOfWork.Detail.GetAll(includeProperties: "Subjects");
             return View(detailList);
         }
+
+
+        public IActionResult Details(int id)
+        {
+            MoreDetails moreDetails = new()
+            {
+                Detail = _unitOfWork.Detail.GetFirstOrDefault(u => u.Id == id, includeProperties: "Subjects")
+            };
+        
+            return View(moreDetails);
+
+        }
+
 
         public IActionResult Privacy()
         {

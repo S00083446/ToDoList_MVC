@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoListWeb\\ToDoListWeb.csproj": {}
+    "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListWeb\\ToDoListWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoList.DataAccess\\ToDoList.DataAccess.csproj": {
+    "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoList.DataAccess\\ToDoList.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoList.DataAccess\\ToDoList.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoList.DataAccess\\ToDoList.DataAccess.csproj",
         "projectName": "ToDoList.DataAccess",
-        "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoList.DataAccess\\ToDoList.DataAccess.csproj",
+        "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoList.DataAccess\\ToDoList.DataAccess.csproj",
         "packagesPath": "C:\\Users\\giles\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoList.DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoList.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\giles\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoListModels\\ToDoListModels.csproj": {
-                "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoListModels\\ToDoListModels.csproj"
+              "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListModels\\ToDoListModels.csproj": {
+                "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListModels\\ToDoListModels.csproj"
               }
             }
           }
@@ -96,18 +96,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoListModels\\ToDoListModels.csproj": {
+    "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListModels\\ToDoListModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoListModels\\ToDoListModels.csproj",
+        "projectUniqueName": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListModels\\ToDoListModels.csproj",
         "projectName": "ToDoListModels",
-        "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoListModels\\ToDoListModels.csproj",
+        "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListModels\\ToDoListModels.csproj",
         "packagesPath": "C:\\Users\\giles\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoListModels\\obj\\",
+        "outputPath": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListModels\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\giles\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -188,18 +188,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoListWeb\\ToDoListWeb.csproj": {
+    "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListWeb\\ToDoListWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoListWeb\\ToDoListWeb.csproj",
+        "projectUniqueName": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListWeb\\ToDoListWeb.csproj",
         "projectName": "ToDoListWeb",
-        "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoListWeb\\ToDoListWeb.csproj",
+        "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListWeb\\ToDoListWeb.csproj",
         "packagesPath": "C:\\Users\\giles\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoListWeb\\obj\\",
+        "outputPath": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\giles\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -216,11 +216,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoList.DataAccess\\ToDoList.DataAccess.csproj": {
-                "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoList.DataAccess\\ToDoList.DataAccess.csproj"
+              "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoList.DataAccess\\ToDoList.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoList.DataAccess\\ToDoList.DataAccess.csproj"
               },
-              "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoListModels\\ToDoListModels.csproj": {
-                "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList_MVC\\ToDoListModels\\ToDoListModels.csproj"
+              "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListModels\\ToDoListModels.csproj": {
+                "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListModels\\ToDoListModels.csproj"
               }
             }
           }
@@ -265,7 +265,7 @@
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[6.0.0-rc.1.21464.1, )"
+              "version": "[6.0.6, )"
             },
             "System.Collections.Immutable": {
               "target": "Package",
@@ -290,7 +290,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
