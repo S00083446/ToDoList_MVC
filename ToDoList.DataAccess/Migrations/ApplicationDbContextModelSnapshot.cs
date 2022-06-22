@@ -292,6 +292,27 @@ namespace ToDoList.DataAccess.Migrations
                     b.ToTable("SubjectDetails");
                 });
 
+            modelBuilder.Entity("ToDoListModels.Lecturer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("CourseTaught")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Lecturers");
+                });
+
             modelBuilder.Entity("ToDoListModels.Subjects", b =>
                 {
                     b.Property<int>("Id")

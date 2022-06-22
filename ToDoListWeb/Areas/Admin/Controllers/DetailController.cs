@@ -9,6 +9,7 @@ using ToDoListModels.ViewModels;
 namespace ToDoListWeb.Areas.Admin.Controllers;
 [Area("Admin")]
 //[Route("api/[controller]/Subject")]
+//[Route("api/[controller]/Subject")]
 //[ApiController]
 public class DetailController : Controller
 {

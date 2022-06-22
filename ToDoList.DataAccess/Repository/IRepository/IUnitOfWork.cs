@@ -10,7 +10,7 @@ namespace ToDoList.DataAccess.Repository.IRepository
     {
         ISubjectRepository Subjects { get; }
         IDetailRepository Detail { get; }
-
+        ILecturerRepository Lecturer { get; }
 
         void Save();
 

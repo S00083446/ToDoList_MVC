@@ -18,9 +18,13 @@ namespace ToDoList.DataAccess.Repository
             _db = db;
             Subjects = new SubjectRepository(_db);
             Detail = new DetailRepository(_db);
+            Lecturer = new LecturerRepository(_db);
+
         }
         public ISubjectRepository Subjects { get; private set; }
         public IDetailRepository Detail { get; private set; }
+        public ILecturerRepository Lecturer { get; private set; }
+
 
 
         public void Save()
