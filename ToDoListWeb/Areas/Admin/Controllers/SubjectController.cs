@@ -4,7 +4,7 @@ using ToDoList.DataAccess.Repository.IRepository;
 using ToDoListModels;
 using System.Collections.Generic;
 
-namespace ToDoListWeb.Controllers;
+namespace ToDoListWeb.Areas.Admin.Controllers;
 [Area("Admin")]
 
 //[Route("api/[controller]/Subject")]

@@ -1,12 +1,22 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Builder;
-using ToDoList.DataAccess;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using ToDoList.DataAccess.Repository.IRepository;
 using ToDoList.DataAccess.Repository;
+using ToDoList.DataAccess.Data;
+using WebApplication = Microsoft.AspNetCore.Builder.WebApplication;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
+//var connectionString = builder.Configuration.GetConnectionString("ApplicationDbContextConnection") ?? throw new InvalidOperationException("Connection string 'ApplicationDbContextConnection' not found.");
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")
+));
+
+builder.Services.AddDefaultIdentity<IdentityUser>()
+    .AddEntityFrameworkStores<ApplicationDbContext>();;
 
 
 // Add services to the container.
@@ -38,6 +48,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseAuthentication(); // should always come before 'UseAuthorization'
 
 app.UseAuthorization();
 
@@ -47,24 +58,3 @@ app.MapControllerRoute(
 
 app.Run();
 
-//// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-//static void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-//{
-//    if (env.IsDevelopment())
-//    {
-//        app.UseDeveloperExceptionPage();
-//        //app.UseSwagger();
-//        //app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "SampleWebAPI v1"));
-//    }
-
-//    app.UseHttpsRedirection();
-//    app.UseAuthentication();
-//    app.UseRouting();
-
-//    app.UseAuthorization();
-
-//    app.UseEndpoints(endpoints =>
-//    {
-//        endpoints.MapControllers();
-//    });
-//}
