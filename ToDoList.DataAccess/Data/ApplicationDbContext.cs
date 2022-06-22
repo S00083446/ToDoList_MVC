@@ -13,5 +13,7 @@ public class ApplicationDbContext : IdentityDbContext
     }
     public DbSet<Subjects> Subjects { get; set; }
     public DbSet<Detail> SubjectDetails { get; set; }
+    public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+
 }
 
