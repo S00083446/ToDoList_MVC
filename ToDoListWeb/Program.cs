@@ -51,7 +51,7 @@ app.UseRouting();
 app.UseAuthentication(); // should always come before 'UseAuthorization'
 
 app.UseAuthorization();
-
+app.MapRazorPages();
 app.MapControllerRoute(
     name: "default",
     pattern: "{area=Student}/{controller=Home}/{action=Index}/{id?}");
