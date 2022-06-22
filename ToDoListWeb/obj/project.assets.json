@@ -3293,6 +3293,25 @@
         "runtime": {
           "bin/placeholder/ToDoListModels.dll": {}
         }
+      },
+      "ToDoListUtility/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.6",
+          "Microsoft.AspNetCore.Identity.UI": "6.0.6",
+          "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": "6.0.0-rc.1.21452.15",
+          "Microsoft.EntityFrameworkCore": "6.0.6",
+          "Microsoft.EntityFrameworkCore.Relational": "6.0.6",
+          "Microsoft.EntityFrameworkCore.SqlServer": "6.0.6",
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.6"
+        },
+        "compile": {
+          "bin/placeholder/ToDoListUtility.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ToDoListUtility.dll": {}
+        }
       }
     }
   },
@@ -10057,6 +10076,11 @@
       "type": "project",
       "path": "../ToDoListModels/ToDoListModels.csproj",
       "msbuildProject": "../ToDoListModels/ToDoListModels.csproj"
+    },
+    "ToDoListUtility/1.0.0": {
+      "type": "project",
+      "path": "../ToDoListUtility/ToDoListUtility.csproj",
+      "msbuildProject": "../ToDoListUtility/ToDoListUtility.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -10071,7 +10095,8 @@
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.6",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 6.0.6",
       "ToDoList.DataAccess >= 1.0.0",
-      "ToDoListModels >= 1.0.0"
+      "ToDoListModels >= 1.0.0",
+      "ToDoListUtility >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -10106,6 +10131,9 @@
             },
             "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListModels\\ToDoListModels.csproj": {
               "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListModels\\ToDoListModels.csproj"
+            },
+            "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListUtility\\ToDoListUtility.csproj": {
+              "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListUtility\\ToDoListUtility.csproj"
             }
           }
         }

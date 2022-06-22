@@ -11,7 +11,7 @@ namespace ToDoList.DataAccess.Repository
 {
     public class LecturerRepository : Repository<Lecturer>, ILecturerRepository
     {
-        private readonly ApplicationDbContext _db;
+        private  ApplicationDbContext _db;
 
         public LecturerRepository(ApplicationDbContext db) : base(db)
         {

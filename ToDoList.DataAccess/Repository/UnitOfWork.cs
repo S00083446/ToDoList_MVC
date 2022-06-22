@@ -25,8 +25,6 @@ namespace ToDoList.DataAccess.Repository
         public IDetailRepository Detail { get; private set; }
         public ILecturerRepository Lecturer { get; private set; }
 
-
-
         public void Save()
         {
             _db.SaveChanges();
