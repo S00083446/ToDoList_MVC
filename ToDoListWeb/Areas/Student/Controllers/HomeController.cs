@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using System.Security.Claims;
 using ToDoList.DataAccess.Repository.IRepository;
 using ToDoListModels;
 
@@ -24,14 +26,33 @@ namespace ToDoListWeb.Areas.Student.Controllers
         }
 
 
-        public IActionResult Details(int id)
+        public IActionResult Details(int detailId)
         {
-            MoreDetails moreDetails = new()
+            MoreDetails moreDetailsObj = new()
             {
-                Detail = _unitOfWork.Detail.GetFirstOrDefault(u => u.Id == id, includeProperties: "Subjects")
+                DetailId = detailId,
+                Detail = _unitOfWork.Detail.GetFirstOrDefault(u => u.Id == detailId, includeProperties: "Subjects")
             };
         
-            return View(moreDetails);
+            return View(moreDetailsObj);
+
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [Authorize]
+        public IActionResult Details(MoreDetails moreDetails)
+        { 
+            var claimsIdentity = (ClaimsIdentity)User.Identity;
+            var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
+            moreDetails.ApplicationUserId = claim.Value;
+
+
+            _unitOfWork.MoreDetails.Add(moreDetails);
+            _unitOfWork.Save();
+           
+
+            return RedirectToAction(nameof(Index));
 
         }
 
