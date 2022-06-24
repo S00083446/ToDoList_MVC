@@ -15,6 +15,9 @@ public class ApplicationDbContext : IdentityDbContext
     public DbSet<Detail> SubjectDetails { get; set; }
     public DbSet<ApplicationUser> ApplicationUsers { get; set; }
     public DbSet<Lecturer> Lecturers { get; set; }
+    public DbSet<MoreDetails> MoreDetails{ get; set; }
+
+
 
 
 

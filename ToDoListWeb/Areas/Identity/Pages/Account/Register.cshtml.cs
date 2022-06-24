@@ -163,12 +163,24 @@ namespace ToDoListWeb.Areas.Identity.Pages.Account
                 user.CourseOfStudy = Input.CourseOfStudy;
                 user.Graduation = Input.Graduation;
                 user.location = Input.location;
+                user.PhoneNumber = Input.phoneNumber;
 
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
+
+                    if (Input.Role == null) // if no role exists
+                        // create a role with default individual role (Student)
+                    {
+                        await _userManager.AddToRoleAsync(user, SD.Role_User_Student);
+                    }
+                    else
+                    {
+                        // Assign the role of what was selected from dropdown
+                        await _userManager.AddToRoleAsync(user, Input.Role);
+                    }
 
                     var userId = await _userManager.GetUserIdAsync(user);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
