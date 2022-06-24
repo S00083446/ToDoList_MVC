@@ -544,8 +544,10 @@ C:\Users\giles\source\repos\ToDoList2_MVC\ToDoListWeb\bin\Debug\net6.0\runtimes\
 C:\Users\giles\source\repos\ToDoList2_MVC\ToDoListWeb\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\giles\source\repos\ToDoList2_MVC\ToDoListWeb\bin\Debug\net6.0\ToDoList.DataAccess.dll
 C:\Users\giles\source\repos\ToDoList2_MVC\ToDoListWeb\bin\Debug\net6.0\ToDoListModels.dll
+C:\Users\giles\source\repos\ToDoList2_MVC\ToDoListWeb\bin\Debug\net6.0\ToDoListUtility.dll
 C:\Users\giles\source\repos\ToDoList2_MVC\ToDoListWeb\bin\Debug\net6.0\ToDoList.DataAccess.pdb
 C:\Users\giles\source\repos\ToDoList2_MVC\ToDoListWeb\bin\Debug\net6.0\ToDoListModels.pdb
+C:\Users\giles\source\repos\ToDoList2_MVC\ToDoListWeb\bin\Debug\net6.0\ToDoListUtility.pdb
 C:\Users\giles\source\repos\ToDoList2_MVC\ToDoListWeb\obj\Debug\net6.0\ToDoListWeb.csproj.AssemblyReference.cache
 C:\Users\giles\source\repos\ToDoList2_MVC\ToDoListWeb\obj\Debug\net6.0\ToDoListWeb.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\giles\source\repos\ToDoList2_MVC\ToDoListWeb\obj\Debug\net6.0\ToDoListWeb.AssemblyInfoInputs.cache
@@ -566,5 +568,3 @@ C:\Users\giles\source\repos\ToDoList2_MVC\ToDoListWeb\obj\Debug\net6.0\refint\To
 C:\Users\giles\source\repos\ToDoList2_MVC\ToDoListWeb\obj\Debug\net6.0\ToDoListWeb.pdb
 C:\Users\giles\source\repos\ToDoList2_MVC\ToDoListWeb\obj\Debug\net6.0\ToDoListWeb.genruntimeconfig.cache
 C:\Users\giles\source\repos\ToDoList2_MVC\ToDoListWeb\obj\Debug\net6.0\ref\ToDoListWeb.dll
-C:\Users\giles\source\repos\ToDoList2_MVC\ToDoListWeb\bin\Debug\net6.0\ToDoListUtility.dll
-C:\Users\giles\source\repos\ToDoList2_MVC\ToDoListWeb\bin\Debug\net6.0\ToDoListUtility.pdb
