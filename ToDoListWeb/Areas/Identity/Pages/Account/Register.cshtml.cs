@@ -15,7 +15,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
 using ToDoListModels;
@@ -113,8 +115,11 @@ namespace ToDoListWeb.Areas.Identity.Pages.Account
             //public string? [] interests { get; set; }
             public string? location { get; set; }
             public string? phoneNumber { get; set; }
+            public string? Role { get; set; }
 
 
+            [ValidateNever] 
+            public  IEnumerable<SelectListItem> RoleList { get; set; }
 
         }
 
@@ -132,6 +137,15 @@ namespace ToDoListWeb.Areas.Identity.Pages.Account
         
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
+            Input = new InputModel()
+            {
+                // Project/Extract our data to 'SelectListItem'(Ienurable)
+                RoleList = _roleManager.Roles.Select(x => x.Name).Select(i => new SelectListItem
+                {
+                    Text = i,
+                    Value = i
+                })
+            };
         }
 
         public async Task<IActionResult> OnPostAsync(string? returnUrl = null)
