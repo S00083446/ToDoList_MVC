@@ -47,8 +47,16 @@ namespace ToDoListWeb.Areas.Student.Controllers
             var claim = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier);
             moreDetails.ApplicationUserId = claim.Value;
 
+            MoreDetails moreDetailsFromDb = _unitOfWork.MoreDetails.GetFirstOrDefault(
+                u => u.ApplicationUserId == claim.Value && u.DetailId == moreDetails.DetailId );
 
-            _unitOfWork.MoreDetails.Add(moreDetails);
+            if (moreDetailsFromDb == null)
+            {
+                _unitOfWork.MoreDetails.Add(moreDetails);
+            }
+         
+
+            //_unitOfWork.MoreDetails.Add(moreDetails);
             _unitOfWork.Save();
            
 

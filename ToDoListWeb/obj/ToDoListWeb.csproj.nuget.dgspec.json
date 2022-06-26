@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListWeb\\ToDoListWeb.csproj": {}
+    "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoListWeb\\ToDoListWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoList.DataAccess\\ToDoList.DataAccess.csproj": {
+    "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoList.DataAccess\\ToDoList.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoList.DataAccess\\ToDoList.DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoList.DataAccess\\ToDoList.DataAccess.csproj",
         "projectName": "ToDoList.DataAccess",
-        "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoList.DataAccess\\ToDoList.DataAccess.csproj",
+        "projectPath": "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoList.DataAccess\\ToDoList.DataAccess.csproj",
         "packagesPath": "C:\\Users\\giles\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoList.DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoList.DataAccess\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\giles\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListModels\\ToDoListModels.csproj": {
-                "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListModels\\ToDoListModels.csproj"
+              "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoListModels\\ToDoListModels.csproj": {
+                "projectPath": "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoListModels\\ToDoListModels.csproj"
               }
             }
           }
@@ -110,14 +110,14 @@
         }
       }
     },
-    "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListModels\\ToDoListModels.csproj": {
+    "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoListModels\\ToDoListModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListModels\\ToDoListModels.csproj",
+        "projectUniqueName": "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoListModels\\ToDoListModels.csproj",
         "projectName": "ToDoListModels",
-        "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListModels\\ToDoListModels.csproj",
+        "projectPath": "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoListModels\\ToDoListModels.csproj",
         "packagesPath": "C:\\Users\\giles\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListModels\\obj\\",
+        "outputPath": "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoListModels\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\giles\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -212,14 +212,14 @@
         }
       }
     },
-    "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListUtility\\ToDoListUtility.csproj": {
+    "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoListUtility\\ToDoListUtility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListUtility\\ToDoListUtility.csproj",
+        "projectUniqueName": "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoListUtility\\ToDoListUtility.csproj",
         "projectName": "ToDoListUtility",
-        "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListUtility\\ToDoListUtility.csproj",
+        "projectPath": "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoListUtility\\ToDoListUtility.csproj",
         "packagesPath": "C:\\Users\\giles\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListUtility\\obj\\",
+        "outputPath": "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoListUtility\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\giles\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -314,14 +314,14 @@
         }
       }
     },
-    "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListWeb\\ToDoListWeb.csproj": {
+    "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoListWeb\\ToDoListWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListWeb\\ToDoListWeb.csproj",
+        "projectUniqueName": "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoListWeb\\ToDoListWeb.csproj",
         "projectName": "ToDoListWeb",
-        "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListWeb\\ToDoListWeb.csproj",
+        "projectPath": "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoListWeb\\ToDoListWeb.csproj",
         "packagesPath": "C:\\Users\\giles\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListWeb\\obj\\",
+        "outputPath": "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoListWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\giles\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -338,14 +338,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoList.DataAccess\\ToDoList.DataAccess.csproj": {
-                "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoList.DataAccess\\ToDoList.DataAccess.csproj"
+              "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoList.DataAccess\\ToDoList.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoList.DataAccess\\ToDoList.DataAccess.csproj"
               },
-              "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListModels\\ToDoListModels.csproj": {
-                "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListModels\\ToDoListModels.csproj"
+              "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoListModels\\ToDoListModels.csproj": {
+                "projectPath": "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoListModels\\ToDoListModels.csproj"
               },
-              "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListUtility\\ToDoListUtility.csproj": {
-                "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListUtility\\ToDoListUtility.csproj"
+              "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoListUtility\\ToDoListUtility.csproj": {
+                "projectPath": "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoListUtility\\ToDoListUtility.csproj"
               }
             }
           }
