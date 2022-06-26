@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3VZNEfN0PsZ7mII1VYtmsWYi/E88XL33AxVLeqTiRUs=",
+  "Hash": "+30FjZ5NXWKF0zwv7qzqqxtHNm31O2cn6iWOJSN3wYY=",
   "Source": "ToDoListWeb",
   "BasePath": "_content/ToDoListWeb",
   "Mode": "Default",
@@ -1137,6 +1137,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\subjects\\98503cfe-30f9-4f24-a481-abb85d2b7def.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoListWeb\\wwwroot\\Images\\subjects\\ea7f447b-48e6-4660-bfd9-ccccb1e67915.jpg",
+      "SourceId": "ToDoListWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoListWeb\\wwwroot\\",
+      "BasePath": "_content/ToDoListWeb",
+      "RelativePath": "Images/subjects/ea7f447b-48e6-4660-bfd9-ccccb1e67915.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\subjects\\ea7f447b-48e6-4660-bfd9-ccccb1e67915.jpg"
     },
     {
       "Identity": "C:\\Users\\giles\\Source\\Repos\\ToDoList2_MVC\\ToDoListWeb\\wwwroot\\js\\detail.js",

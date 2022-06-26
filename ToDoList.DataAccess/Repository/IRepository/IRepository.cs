@@ -11,7 +11,7 @@ namespace ToDoList.DataAccess.Repository.IRepository
     {
         //T - Subject
         T GetFirstOrDefault(Expression<Func<T, bool>> filter, string? includeProperties = null);
-        IEnumerable<T> GetAll(string? includeProperties = null);// Expression<Func<T, bool>>? filter = null, string? includeProperties = null);
+        IEnumerable<T> GetAll(Expression<Func<T, bool>> filter = null, string? includeProperties = null);// Expression<Func<T, bool>>? filter = null, string? includeProperties = null);
         void Add(T entity);
         void Remove(T entity);
         void RemoveRange(IEnumerable<T> entity);

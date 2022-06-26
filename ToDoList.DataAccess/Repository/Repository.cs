@@ -18,7 +18,7 @@ namespace ToDoList.DataAccess.Repository
         public Repository(ApplicationDbContext db)
         {
             _db = db;
-            //_db.SubjectDetails.Include(u => u.Subjects);  only for ApplicationDB Context
+            _db.MoreDetails.Include(u => u.Detail);//.Include(u => u.Subjects); //only for ApplicationDB Context
             this.dbSet = _db.Set<T>();
         }
         public void Add(T entity)
@@ -28,9 +28,14 @@ namespace ToDoList.DataAccess.Repository
         }
 
         //includeProp - "Category, Subjects", exact case
-        public IEnumerable<T> GetAll(string? includeProperties = null)//Expression<Func<T, bool>>? filter=null, string? includeProperties = null)
+        public IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter = null, string? includeProperties = null)
         {
             IQueryable<T> query = dbSet;
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
+
             if (includeProperties != null)
             {
                 foreach (var includeProp in includeProperties.Split(new char[] {','}, StringSplitOptions.RemoveEmptyEntries))

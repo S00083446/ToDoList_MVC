@@ -1,94 +1,69 @@
-﻿
+﻿@model ToDoListModels.ViewModels.MoreDetailsVM
 <form method="post">
-	<br />
-	<div class="container">
-		<div class="card">
-			<div class="card-header bg-dark text-light ml-0">
-				<div class="row">
-					<div class="col-6  pt-2">
-						<i class="fa "></i> &nbsp;
-Your ToDos					</div>
-					<div class="col-6 text-end">
-						<a class="btn btn-outline-info btn-sm">Continue Adding</a>
-					</div>
-				</div>
-			</div>
+    <br />
+    <div class="container">
+        <div class="card">
+            <div class="card-header bg-dark text-light ml-0">
+                <div class="row">
+                    <div class="col-6  pt-2">
+                        <i class="fa fa-shopping-cart"></i> &nbsp;
+                        List of ToDos
+                    </div>
+                    <div class="col-6 text-end">
+                        <a asp-area="Customer" asp-controller="Home" asp-action="Index" class="btn btn-outline-info btn-sm">Continue Shopping</a>
+                    </div>
+                </div>
+            </div>
 
-			<div class="card-body">
-				<div class="row">
-					<div class="d-none d-lg-block col-lg-1 text-center py-2">
-						<img src="img" class="rounded" width="100%" />
-					</div>
-					<div class="col-12 col-lg-6 pt-md-3">
-						<h5><strong>Description</strong></h5>
-						<p><small>StartDate</small></p>
-						<p><small>EndDate</small></p>
-						<p><small>StartTime</small></p>
-						<p><small>EndTime</small></p>
-						<p><small>DaysUntilEvent</small></p>
-						<p><small>Location</small></p>
-						<p><small>RoomName</small></p>
-						<p><small>Notes</small></p>
-						<p><small>Cost</small></p>
-						<p><small>PercentageOfTotalMarks</small></p>
-						<p><small>ImageUrl</small></p>
-						<p><small>NumberOfParticpants</small></p>
-						<p><small>SubjectsId</small></p>
-
-
+            <div class="card-body">
+                @foreach (var item in Model.ToDoList)
+                {
+                    <div class="row">
+                        <div class="d-none d-lg-block col-lg-1 text-center py-2">
+                            <img src="@item.Detail.ImageUrl" class="rounded" width="100%" />
+                        </div>
+                        <div class="col-12 col-lg-6 pt-md-3">
+                            <h5><strong>@(@item.Detail.EndDate - @item.Detail.StartDate)</strong></h5>
+                            <p><small>@Html.Raw(item.Detail.Description)</small></p>
+                            <p>@item.Detail.StartDate</p>
+                            <p>@item.Detail.EndDate</p>
+                            <p>@item.Detail.StartTime</p>
+                            <p>@item.Detail.EndTime</p>
+                            <p>@item.Detail.Notes</p>
+                            <p>@item.Detail.DaysUntilEvent</p>
+                            <p>@item.Detail.PercentageOfTotalMarks</p>
+                            <p>@item.Detail.Location</p>
+                            <p>@item.Detail.RoomName</p>
 
 
-					</div>
-				@*	<div class="col-12  col-lg-5 text-center row">
-						<div class="col-4 text-md-right pt-4">
-							<h6><strong>$Price<span class="text-muted">x</span> Count </strong></h6>
-						</div>*@
+                            <h6> @item.Detail.Cost.ToString("c") </h6>
+                        </div>
+                    </div>
+
+                    <div class="col-12  col-lg-5 text-center row">
+                      @*  <div class="col-4 text-md-right pt-4">
+                            <h6>@item.Detail</h6>
+                        </div>*@
 
 
+                        <div class="col-2 col-sm-4 col-lg-2 text-right pt-2">
+                            <a asp-action="remove" asp-route-toDoId="@item.Id" class="btn btn-danger">
+                                <i class="bi bi-trash-fill"></i>
+                            </a>
+                        </div>
+                    </div>
+                <hr />
+                }
 
-					@*	<div class="col-6 col-sm-4 col-lg-6 pt-2">
-							<div class="w-75 btn-group" role="group">
-								<a class="btn btn-primary">
-									<i class="bi bi-plus-square"></i>
-								</a> &nbsp;
-								<a class="btn btn-warning">
-									<i class="bi bi-dash-square"></i>
-								</a>
-							</div>
+        </div>
 
-						</div>*@
-						<div class="col-2 col-sm-4 col-lg-2 text-right pt-2">
-							<a class="btn btn-danger">
-								<i class="bi bi-trash-fill"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-				<hr />
-
-				@*<div class="row">
-					<div class="col-12 col-md-6 offset-md-6 col-lg-4 offset-lg-8 pr-4">
-						<ul class="list-group">
-							<li class="list-group-item d-flex justify-content-between bg-light">
-								<span class="text-info"> Total (USD)</span>
-								<strong class="text-info">$$$</strong>
-							</li>
-						</ul>
-					</div>
-				</div>*@
-
-			</div>
-
-			<div class="card-footer">
-				<div class="card-footer row">
-					<div class="col-sm-12 col-lg-4 col-md-6 offset-lg-8 offset-md-6 ">
-						<a class="btn btn-success form-control">Summary</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+        <div class="card-footer">
+            <div class="card-footer row">
+                <div class="col-sm-12 col-lg-4 col-md-6 offset-lg-8 offset-md-6 ">
+                    <a asp-action="Summary" class="btn btn-success form-control">Summary</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
 </form>
-
-
-
