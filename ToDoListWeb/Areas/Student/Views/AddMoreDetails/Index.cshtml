@@ -1,4 +1,5 @@
-﻿@model ToDoListModels.ViewModels.MoreDetailsVM
+﻿@using ToDoListUtility
+@model ToDoListModels.ViewModels.MoreDetailsVM
 <form method="post">
     <br />
     <div class="container">
@@ -24,7 +25,7 @@
                         </div>
                         <div class="col-12 col-lg-6 pt-md-3">
                             <h5><strong>@(@item.Detail.EndDate - @item.Detail.StartDate)</strong></h5>
-                            <p><small>@Html.Raw(item.Detail.Description)</small></p>
+                            <small>@Html.Raw(item.Detail.Description)</small>
                             <p>@item.Detail.StartDate</p>
                             <p>@item.Detail.EndDate</p>
                             <p>@item.Detail.StartTime</p>

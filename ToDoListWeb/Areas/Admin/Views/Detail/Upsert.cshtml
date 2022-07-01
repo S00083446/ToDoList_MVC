@@ -1,4 +1,5 @@
-﻿@model ToDoListModels.ViewModels.DetailsViewModel
+﻿@using ToDoListUtility
+@model ToDoListModels.ViewModels.DetailsViewModel
 
 <form method="post" asp-action="Upsert" enctype="multipart/form-data">
     <input asp-for="Details.Id" hidden />
@@ -8,15 +9,28 @@
         <div class="col-10">
             <div class="border p-3 mt-4 row">
                 <div class="col-12 pb-2">
-                    <h2 class="text-primary"> @(Model.Details.Id!=0?"Update": "Create") a ToDo</h2>
-                    <hr />
+                    <h2 class="text-primary"> @(Model.Details.Id!=0?"Update": "Create") a ToDo</h2>                    <hr />
                 </div>
                 @*<div asp-validation-summary="All"></div>*@
 
-                <div class="mb-3">
-                    <label asp-for="Details.Description"></label>
-                    <textarea asp-for="Details.Description" rows="3" class="form-control"></textarea>
-                    <span asp-validation-for="Details.Description" class="text-danger"></span>
+                <div class="mb-3 col-6">
+
+                    @if (User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_User_Student))
+                    {
+
+                        <label asp-for="Details.Description"></label>
+                        <textarea asp-for="Details.Description" rows="3" class="form-control"></textarea>
+                        <span asp-validation-for="Details.Description" class="text-danger"></span>
+
+                        @*<input asp-for="Details.Description" type="text" class="form-control" />*@
+                    }
+                    else
+                    {
+                        <input asp-for="Details.Description" readonly type="text" class="form-control" />
+                        @*<textarea asp-for="Details.Description" readonly rows="3" class="form-control"></textarea>*@
+
+                    }
+
                 </div>
                 <div class="mb-3 col-6">
                     <label asp-for="Details.StartDate"></label>
@@ -87,7 +101,7 @@
                     <span asp-validation-for="Details.SubjectsId" class="text-danger"></span>
                 </div>
 
-                @* same functionality as ViewBag *@
+                @* same functionality as ViewBag
                 @*    <div class="mb-3">
                 <label asp-for="SubjectsId"></label>
                 <select asp-for="SubjectsId" asp-items="@(ViewData["SubjectList"]) as IEnumerable<SelectListItem>" class="form-select">
