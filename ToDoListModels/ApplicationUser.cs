@@ -15,6 +15,7 @@ namespace ToDoListModels
         public DateTime? Graduation { get; set; }
         //public string? [] interests { get; set; }
         public string? location { get; set; }
-         
+        public string Email { get; set; }
+
     }
 }

@@ -11,6 +11,7 @@ namespace ToDoListWeb.Areas.Student.Controllers
     public class AddMoreDetailsController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
+
         public MoreDetailsVM  MoreDetailsVM { get; set; }
         public AddMoreDetailsController (IUnitOfWork unitOfWork)
         {

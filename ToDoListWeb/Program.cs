@@ -30,7 +30,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddSingleton<IEmailSender, EmailSender>();
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();// before .NET 6
-
+builder.Services.AddAuthentication().AddFacebook(options =>
+{
+    options.AppId = "1777030255969977";
+    options.AppSecret = "a74e0e072a467b4e199417cb85b62cc1";
+});
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = $"/Identity/Account/Login";

@@ -17,6 +17,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.WebUtilities;
 using Microsoft.Extensions.Logging;
+using ToDoListModels;
+using ToDoListUtility;
 
 namespace ToDoListWeb.Areas.Identity.Pages.Account
 {
@@ -84,6 +86,14 @@ namespace ToDoListWeb.Areas.Identity.Pages.Account
             [Required]
             [EmailAddress]
             public string Email { get; set; }
+            [Required]
+            public string Name { get; set; }
+            public string StudentNumber { get; set; }
+            public string CourseOfStudy { get; set; }
+            public DateTime? Graduation { get; set; }
+            //public string? [] interests { get; set; }
+            public string? location { get; set; }
+            public string? phoneNumber { get; set; }
         }
         
         public IActionResult OnGet() => RedirectToPage("./Login");
@@ -131,7 +141,9 @@ namespace ToDoListWeb.Areas.Identity.Pages.Account
                 {
                     Input = new InputModel
                     {
-                        Email = info.Principal.FindFirstValue(ClaimTypes.Email)
+                        Email = info.Principal.FindFirstValue(ClaimTypes.Email),
+                         Name = info.Principal.FindFirstValue(ClaimTypes.Name)
+
                     };
                 }
                 return Page();
@@ -156,12 +168,21 @@ namespace ToDoListWeb.Areas.Identity.Pages.Account
                 await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
                 await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
 
+                user.Name = Input.Name;
+                user.StudentNumber = Input.StudentNumber;
+                user.CourseOfStudy = Input.CourseOfStudy;
+                user.Graduation = Input.Graduation;
+                user.location = Input.location;
+                user.PhoneNumber = Input.phoneNumber;
+
                 var result = await _userManager.CreateAsync(user);
                 if (result.Succeeded)
                 {
                     result = await _userManager.AddLoginAsync(user, info);
                     if (result.Succeeded)
                     {
+                        // anyone who signins u with Facebook is assigned role of 'Student'
+                        await _userManager.AddToRoleAsync(user, SD.Role_User_Student);
                         _logger.LogInformation("User created an account using {Name} provider.", info.LoginProvider);
 
                         var userId = await _userManager.GetUserIdAsync(user);
@@ -197,11 +218,11 @@ namespace ToDoListWeb.Areas.Identity.Pages.Account
             return Page();
         }
 
-        private IdentityUser CreateUser()
+        private ApplicationUser CreateUser()
         {
             try
             {
-                return Activator.CreateInstance<IdentityUser>();
+                return Activator.CreateInstance<ApplicationUser>();
             }
             catch
             {
