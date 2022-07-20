@@ -10,7 +10,7 @@ namespace ToDoList.DataAccess.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "SubjectDetails",
+                name: "ToDo",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -29,34 +29,34 @@ namespace ToDoList.DataAccess.Migrations
                     NumberOfParticpants = table.Column<int>(type: "int", nullable: false),
                     ImageUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SubjectsId = table.Column<int>(type: "int", nullable: false),
-                    CoverTypeId = table.Column<int>(type: "int", nullable: false)
+                    //CoverTypeId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_SubjectDetails", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_SubjectDetails_CoverTypes_CoverTypeId",
-                        column: x => x.CoverTypeId,
-                        principalTable: "CoverTypes",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_SubjectDetails_Subjects_SubjectsId",
-                        column: x => x.SubjectsId,
-                        principalTable: "Subjects",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                    //table.PrimaryKey("PK_SubjectDetails", x => x.Id);
+                    //table.ForeignKey(
+                    //    name: "FK_SubjectDetails_CoverTypes_CoverTypeId",
+                    //    column: x => x.CoverTypeId,
+                    //    principalTable: "CoverTypes",
+                    //    principalColumn: "Id",
+                    //    onDelete: ReferentialAction.Cascade);
+                    //table.ForeignKey(
+                    //    name: "FK_SubjectDetails_Subjects_SubjectsId",
+                    //    column: x => x.SubjectsId,
+                    //    principalTable: "Subjects",
+                    //    principalColumn: "Id",
+                    //    onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.CreateIndex(
-                name: "IX_SubjectDetails_CoverTypeId",
-                table: "SubjectDetails",
-                column: "CoverTypeId");
+            //migrationBuilder.CreateIndex(
+            //    name: "IX_SubjectDetails_CoverTypeId",
+            //    table: "SubjectDetails",
+            //    column: "CoverTypeId");
 
-            migrationBuilder.CreateIndex(
-                name: "IX_SubjectDetails_SubjectsId",
-                table: "SubjectDetails",
-                column: "SubjectsId");
+            //migrationBuilder.CreateIndex(
+            //    name: "IX_SubjectDetails_SubjectsId",
+            //    table: "SubjectDetails",
+            //    column: "SubjectsId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

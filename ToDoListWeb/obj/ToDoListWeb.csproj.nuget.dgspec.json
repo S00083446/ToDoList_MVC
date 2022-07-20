@@ -30,6 +30,9 @@
             "projectReferences": {
               "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListModels\\ToDoListModels.csproj": {
                 "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListModels\\ToDoListModels.csproj"
+              },
+              "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListUtility\\ToDoListUtility.csproj": {
+                "projectPath": "C:\\Users\\giles\\source\\repos\\ToDoList2_MVC\\ToDoListUtility\\ToDoListUtility.csproj"
               }
             }
           }

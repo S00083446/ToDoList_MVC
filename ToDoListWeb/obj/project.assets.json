@@ -3317,7 +3317,8 @@
           "Microsoft.EntityFrameworkCore.Relational": "6.0.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.6",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.6",
-          "ToDoListModels": "1.0.0"
+          "ToDoListModels": "1.0.0",
+          "ToDoListUtility": "1.0.0"
         },
         "compile": {
           "bin/placeholder/ToDoList.DataAccess.dll": {}

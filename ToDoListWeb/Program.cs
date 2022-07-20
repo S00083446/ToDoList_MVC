@@ -9,6 +9,8 @@ using WebApplication = Microsoft.AspNetCore.Builder.WebApplication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using ToDoListUtility;
+using ToDoList.DataAccess.DbInitialiser;
+using ToDoList.DataAccess.DbInitializer;
 
 var builder = WebApplication.CreateBuilder(args);
 //var connectionString = builder.Configuration.GetConnectionString("ApplicationDbContextConnection") ?? throw new InvalidOperationException("Connection string 'ApplicationDbContextConnection' not found.");
@@ -17,8 +19,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")
 ));
 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddDefaultTokenProviders() 
-        .AddEntityFrameworkStores<ApplicationDbContext>();;
+builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddDefaultTokenProviders()
+        .AddEntityFrameworkStores<ApplicationDbContext>()
+        .AddDefaultUI();
 
 
 // Add services to the container.
@@ -28,6 +31,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlSer
     builder.Configuration.GetConnectionString("DefaultConnection")
     ));
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+builder.Services.AddScoped<IDbInitializer, DbInitializer>();
+
 builder.Services.AddSingleton<IEmailSender, EmailSender>();
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();// before .NET 6
 builder.Services.AddAuthentication().AddFacebook(options =>
@@ -63,6 +68,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+SeedDatabase();
 app.UseAuthentication(); // should always come before 'UseAuthorization'
 
 app.UseAuthorization();
@@ -73,3 +79,12 @@ app.MapControllerRoute(
 
 app.Run();
 
+void SeedDatabase()
+{
+    // this will call our db initializer and create a new admin role if none is created
+    using (var scope = app.Services.CreateScope())
+    {
+        var dbInitializer = scope.ServiceProvider.GetRequiredService<IDbInitializer>();
+        dbInitializer.Initialize(); // seed database
+    }
+}

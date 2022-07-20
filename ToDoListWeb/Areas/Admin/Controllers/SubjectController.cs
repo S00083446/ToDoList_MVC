@@ -3,12 +3,16 @@ using ToDoList.DataAccess;
 using ToDoList.DataAccess.Repository.IRepository;
 using ToDoListModels;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
+using ToDoListUtility;
 
 namespace ToDoListWeb.Areas.Admin.Controllers;
 [Area("Admin")]
 
 //[Route("api/[controller]/Subject")]
 //[ApiController]
+[Authorize(Roles = SD.Role_Admin)]
+
 public class SubjectController : Controller
 {
     //private readonly ApplicationDbContext _db;

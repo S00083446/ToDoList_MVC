@@ -23,13 +23,13 @@ namespace ToDoListUtility
 
             /// send email
 
-            using (var emailClient = new SmtpClient())
-            {
-                emailClient.Connect("smtp.gmail.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
-                emailClient.Authenticate("gilesforde@gmail.com", "Seamus4d2018gm");
-                emailClient.Send(emailToSend);                                                                                                 
-                emailClient.Disconnect(true);
-            }
+            //using (var emailClient = new SmtpClient())
+            //{
+            //    emailClient.Connect("smtp.gmail.com", 587, MailKit.Security.SecureSocketOptions.StartTls);
+            //    emailClient.Authenticate("gilesforde@gmail.com", "Seamus4d2018gm");
+            //    emailClient.Send(emailToSend);                                                                                                 
+            //    emailClient.Disconnect(true);
+            //}
 
             return Task.CompletedTask;
         }

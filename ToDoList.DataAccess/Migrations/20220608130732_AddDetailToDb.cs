@@ -37,18 +37,18 @@ namespace ToDoList.DataAccess.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Details", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Details_CoverTypes_CoverTypeId",
-                        column: x => x.CoverTypeId,
-                        principalTable: "CoverTypes",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Details_Subjects_SubjectsId",
-                        column: x => x.SubjectsId,
-                        principalTable: "Subjects",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                    //table.ForeignKey(
+                    //    name: "FK_Details_CoverTypes_CoverTypeId",
+                    //    column: x => x.CoverTypeId,
+                    //    principalTable: "CoverTypes",
+                    //    principalColumn: "Id",
+                    //    onDelete: ReferentialAction.Cascade);
+                    //table.ForeignKey(
+                    //    name: "FK_Details_Subjects_SubjectsId",
+                    //    column: x => x.SubjectsId,
+                    //    principalTable: "Subjects",
+                    //    principalColumn: "Id",
+                    //    onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
